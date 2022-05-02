@@ -264,7 +264,7 @@ body {
 							</button>
 						</div>
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
-							 <div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-74 active"><a title="প্রচ্ছদ" href="index.html">প্রচ্ছদ</a></li>
+							 <div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-74 active"><a title="প্রচ্ছদ" href="/school/index.php">প্রচ্ছদ</a></li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95 dropdown"><a title="প্রশাসন" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">প্রশাসন <span class="caret"></span></a>
 <ul role="menu" class=" dropdown-menu" >
 	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-113" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-113"><a title="শিক্ষকবৃন্দ" href="category/%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%95%e0%a6%ac%e0%a7%83%e0%a6%a8%e0%a7%8d%e0%a6%a6/index.html">শিক্ষকবৃন্দ</a></li>
