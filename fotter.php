@@ -46,4 +46,8 @@ function topFunction() {
 		</div>	
 	</section>
 				
-				<script type='text/javascript' src='wp-includes/js/wp-embed.min7bcd.js?ver=4.8.3'></script>
+				<script type='text/javascript' src='<?php echo "/school/wp-includes/js/wp-embed.min7bcd.js" ;?>'></script>
+
+
+
+</html>
