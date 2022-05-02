@@ -44,6 +44,7 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
+<!-- shofiqulislamm91  0123456789shofiq -->
 <link rel='stylesheet' id='bootstrap-css'  href='<?php echo "wp-content/themes/educationaltheme/css/bootstrap.min7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'  href='<?php echo "wp-content/themes/educationaltheme/css/font-awesome.min7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
 <link rel='stylesheet' id='responsive-css'  href='<?php echo "wp-content/themes/educationaltheme/css/responsive7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
