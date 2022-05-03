@@ -25,7 +25,7 @@
 							
 							<div class="History">
 								
-								<img width="741" height="320" src="wp-content/uploads/2018/04/5.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://themesbazar.net/educational/wp-content/uploads/2018/04/5.jpg 741w, http://themesbazar.net/educational/wp-content/uploads/2018/04/5-300x130.jpg 300w" sizes="(max-width: 741px) 100vw, 741px" />								
+								<img width="741" height="320" src="pages/wp-content/uploads/2018/04/5.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://themesbazar.net/educational/wp-content/uploads/2018/04/5.jpg 741w, http://themesbazar.net/educational/wp-content/uploads/2018/04/5-300x130.jpg 300w" sizes="(max-width: 741px) 100vw, 741px" />								
 								<p> সুনামগঞ্জ জেলাধীন জগন্নাথপুরস্থ এক প্রাচীন জনপদের নাম ইসহাকপুর । এ গ্রামের সম্ভ্রান্ত ধর্মভীরু মুসলিম পরিবার সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায়, ধর্মভীরুতায়.সামাজিক আচার-অনুষ্ঠানে এ জনপদের অন্য সবের উপর রয়েছে এ পরিবারের অতুলনীয় সম্মান। যতদূর জানা যায় মরহুম দেলওয়ার খান ছিলেন এ পরিবারের একজন শিক্ষিত ব্যক্তি ।তিনি যেমন ছিলেন <a href='history/%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8%e0%a7%87%e0%a6%b0-%e0%a6%87%e0%a6%a4%e0%a6%bf%e0%a6%b9%e0%a6%be%e0%a6%b8/index.html' class='readmore'></a><span style="text-align:right"><a href="history/%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8%e0%a7%87%e0%a6%b0-%e0%a6%87%e0%a6%a4%e0%a6%bf%e0%a6%b9%e0%a6%be%e0%a6%b8/index.html">বিস্তারিত...</a></span></p>
 							</div>
 													</div>
@@ -47,7 +47,7 @@
 							
 							<div class="profile">
 								
-								<img width="400" height="500" src="wp-content/uploads/2018/04/12.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
+								<img width="400" height="500" src="pages/wp-content/uploads/2018/04/12.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
 								<p> মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা বোর্ড, যশোর জনগণের দোরগোড়ায় শিক্ষা সেবা পৌঁছে দেবার লক্ষ্যে যাবতীয় কার্যাদী সম্পাদনে  ডিজিটাল প্রযুক্তি ব্যবহার  ও যশোর শিক্ষাবোর্ডের অধীন সকল প্রতিষ্ঠানের তথ্য অনলাইনে প্রেরণের ব্যবস্থা নেওয়া হয়েছে জেনে আমি আনন্দিত। বৃটিশ ঔপনিবেশিক আমলে মহৎপ্রাণ ব্যক্তি বাবু মথুরানাথ কুন্ডু মহাশয়ের প্রচেষ্টায় ১৮৫৬ খ্রিঃ প্রতিষ্ঠিত হয়েছিল ঐতিহ্যবাহী কুমারখালী এম এন পাইলট (মডেল) <a href='speech-one/%e0%a6%85%e0%a6%a7%e0%a7%8d%e0%a6%af%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a7%87%e0%a6%b0-%e0%a6%ac%e0%a6%be%e0%a6%a3%e0%a7%80/index.html' class='readmore'></a><span style="text-align:right"><a href="speech-one/%e0%a6%85%e0%a6%a7%e0%a7%8d%e0%a6%af%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a7%87%e0%a6%b0-%e0%a6%ac%e0%a6%be%e0%a6%a3%e0%a7%80/index.html">বিস্তারিত...</a></span></p>
 							</div>
 													</div>
@@ -57,7 +57,7 @@
 							
 							<div class="profile">
 								
-								<img width="400" height="500" src="wp-content/uploads/2018/04/08.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
+								<img width="400" height="500" src="pages/wp-content/uploads/2018/04/08.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
 								<p> বাংলাদেশের শিক্ষা ব্যবস্থার একটি পূর্ণাঙ্গ ধারা মাদরাসা শিক্ষা। সাধারণ শিক্ষার পাশপাশি সমান্তরালভাবে এটি বয়ে চলেছে দীর্ঘদিন ধরে এবং এ দেশের জন-মানসে তার স্থান করে নিয়েছে সুরক্ষিত ও সুদৃঢ়ভাবে। ধর্মীয় শিক্ষা ও জাগতিক শিক্ষা দুটি পরস্পরের পরিপুরক। এ সমন্বিত ইসলামী শিক্ষা ব্যবস্থার প্রতিষ্ঠানিক রুপই হচ্ছে মাদরাসা শিক্ষা। ইহলৌকিক উন্নতির সাথে সাথে পারলৌকিক মুক্তির পথ দেখাতেই প্রতিষ্ঠা <a href='speech-two/%e0%a6%89%e0%a6%aa%e0%a6%a7%e0%a7%8d%e0%a6%af%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a7%87%e0%a6%b0-%e0%a6%ac%e0%a6%be%e0%a6%a3%e0%a7%80/index.html' class='readmore'></a><span style="text-align:right"><a href="speech-two/%e0%a6%89%e0%a6%aa%e0%a6%a7%e0%a7%8d%e0%a6%af%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a7%87%e0%a6%b0-%e0%a6%ac%e0%a6%be%e0%a6%a3%e0%a7%80/index.html">বিস্তারিত...</a></span></p>
 							</div>
 													</div>
@@ -79,7 +79,7 @@
 								<div class="col-lg-12 col-md-12 col-sm-12">
 									<h4 class="catagory_title_1"> ছাত্রছাত্রীদের তথ্য</h4>
 									<div class="news_information">
-										<img src="wp-content/themes/educationaltheme/images/menu01.jpg" >
+										<img src="pages/wp-content/themes/educationaltheme/images/menu01.jpg" >
 										<div class="menu-student-information-container"><ul id="menu-student-information" class="menu"><li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="%e0%a6%9b%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%9b%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a7%80%e0%a6%b0-%e0%a6%86%e0%a6%b8%e0%a6%a8-%e0%a6%b8%e0%a6%82%e0%a6%96%e0%a7%8d%e0%a6%af%e0%a6%be/index.html">ছাত্রছাত্রীর আসন সংখ্যা</a></li>
 <li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="%e0%a6%ad%e0%a6%b0%e0%a7%8d%e0%a6%a4%e0%a6%bf-%e0%a6%a4%e0%a6%a5%e0%a7%8d%e0%a6%af/index.html">ভর্তি তথ্য</a></li>
 <li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="%e0%a6%a8%e0%a7%8b%e0%a6%9f%e0%a6%bf%e0%a6%b6/index.html">নোটিশ</a></li>
@@ -91,6 +91,7 @@
 						</div>
 						
 						
+						
 						<!----------__________ homemenu two start ___________------------>
 					
 					
@@ -99,7 +100,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<h4 class="catagory_title_2"> শিক্ষকদের তথ্য</h4>
 							<div class="news_information">
-								<img src="wp-content/themes/educationaltheme/images/menu02.jpg" >
+								<img src="pages/wp-content/themes/educationaltheme/images/menu02.jpg" >
 								<div class="menu-teachers-information-container"><ul id="menu-teachers-information" class="menu"><li id="menu-item-120" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-120"><a href="category/%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%95%e0%a6%ac%e0%a7%83%e0%a6%a8%e0%a7%8d%e0%a6%a6/index.html">শিক্ষকবৃন্দ</a></li>
 <li id="menu-item-121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"><a href="%e0%a6%b6%e0%a7%82%e0%a6%a3%e0%a7%8d%e0%a6%af%e0%a6%aa%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%a4%e0%a6%be%e0%a6%b2%e0%a6%bf%e0%a6%95%e0%a6%be/index.html">শূণ্যপদের তালিকা</a></li>
 <li id="menu-item-119" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-119"><a href="category/%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%95%e0%a7%8d%e0%a6%a4%e0%a6%a8-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a7%e0%a6%be%e0%a6%a8-%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%95/index.html">প্রাক্তন প্রধান শিক্ষক</a></li>
@@ -121,7 +122,7 @@
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<h4 class="catagory_title_3"> ডাউনলোড</h4>
 								<div class="news_information">
-								<img src="wp-content/themes/educationaltheme/images/menu03.jpg" >
+								<img src="pages/wp-content/themes/educationaltheme/images/menu03.jpg" >
                          	   <ul>
 															
                           	      <li><a href="download/%e0%a7%a7%e0%a6%ae-%e0%a6%b8%e0%a6%be%e0%a6%ae%e0%a7%9f%e0%a6%bf%e0%a6%95%e0%a6%bf-%e0%a6%aa%e0%a6%b0%e0%a7%80%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%be%e0%a6%b0-%e0%a6%b0%e0%a7%81%e0%a6%9f%e0%a6%bf/index.html">১ম সাময়িকি পরীক্ষার রুটিন ডাউনলোড</a></li>
@@ -149,7 +150,7 @@
 								<div class="col-lg-12 col-md-12 col-sm-12">
 								<h4 class="catagory_title_4"> একাডেমীক তথ্য </h4>
 									<div class="news_information">
-										<img src="wp-content/themes/educationaltheme/images/menu04.jpg" >
+										<img src="pages/wp-content/themes/educationaltheme/images/menu04.jpg" >
 										<div class="menu-academic-information-container"><ul id="menu-academic-information" class="menu"><li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="%e0%a6%95%e0%a6%95%e0%a7%8d%e0%a6%b7-%e0%a6%b8%e0%a6%82%e0%a6%96%e0%a7%8d%e0%a6%af%e0%a6%be/index.html">কক্ষ সংখ্যা</a></li>
 <li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="%e0%a6%9b%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%9b%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a7%80%e0%a6%b0-%e0%a6%86%e0%a6%b8%e0%a6%a8-%e0%a6%b8%e0%a6%82%e0%a6%96%e0%a7%8d%e0%a6%af%e0%a6%be/index.html">ছাত্রছাত্রীর আসন সংখ্যা</a></li>
 <li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="%e0%a6%9b%e0%a7%81%e0%a6%9f%e0%a6%bf%e0%a6%b0-%e0%a6%a4%e0%a6%be%e0%a6%b2%e0%a6%bf%e0%a6%95%e0%a6%be/index.html">ছুটির তালিকা</a></li>
@@ -225,7 +226,7 @@
 							  fjs.parentNode.insertBefore(js, fjs);
 							  }(document, 'script', 'facebook-jssdk'));
 							</script>
-						<div class="fb-page" data-href="https://www.facebook.com/themesbazar" 		data-tabs="timeline" data-width="390" data-height="120" data-small-header="true" 
+						<div class="fb-page" data-href="https://www.facebook.com/softechcomputertraningcenter" 		data-tabs="timeline" data-width="390" data-height="120" data-small-header="true" 
 						data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 				   </div>
 				   

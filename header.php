@@ -10,12 +10,12 @@
 <title>Home | Oxyzen School And Collage </title>  
       
       
-<link rel="icon" href="<?php echo "/school/wp-content/themes/educationaltheme/images/favicon.png " ; ?>" type="image/x-icon" />
-<link rel="shortcut icon" href="<?php echo "/school/wp-content/themes/educationaltheme/images/favicon.png";?>" type="image/x-icon" />       
+<link rel="icon" href="<?php echo "/school/pages/wp-content/themes/educationaltheme/images/favicon.png " ; ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo "/school/pages/wp-content/themes/educationaltheme/images/favicon.png";?>" type="image/x-icon" />       
              
 <meta property="og:title" content="মো: আব্দুল হামিদ" /> 
 <meta property="og:description" content="" />  
-<meta property="og:image" content="/school/wp-content/uploads/2018/04/13.gif" /> 
+<meta property="og:image" content="/school/pages/wp-content/uploads/2018/04/13.gif" /> 
 <meta property="og:video" content="" /> 
 <meta property="og:video:width" content="560" />  
 <meta property="og:video:height" content="340" />  
@@ -45,15 +45,15 @@ img.emoji {
 }
 </style>
 
-<link rel='stylesheet' id='bootstrap-css'  href='<?php echo "/school/wp-content/themes/educationaltheme/css/bootstrap.min7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-css'  href='<?php echo "/school/wp-content/themes/educationaltheme/css/font-awesome.min7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
-<link rel='stylesheet' id='responsive-css'  href='<?php echo "/school/wp-content/themes/educationaltheme/css/responsive7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
-<link rel='stylesheet' id='menu-css'  href='<?php echo "/school/wp-content/themes/educationaltheme/css/menu7bcd.css?ver=4.8.3" ;?>' type='text/css' media='all' />
-<link rel='stylesheet' id='stylesheet-css'  href='<?php echo "/school/wp-content/themes/educationaltheme/css/stylesheet7bcd.html?ver=4.8.3";?>' type='text/css' media='all' />
-<link rel='stylesheet' id='style-css'  href='<?php echo "/school/wp-content/themes/educationaltheme/style7bcd.css?ver=4.8.3" ;?>' type='text/css' media='all' />
-<script type='text/javascript' src='<?php echo "/school/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4";?>'></script>
-<script type='text/javascript' src='<?php echo "/school/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1"; ?>'></script>
-<script type='text/javascript' src='<?php echo "/school/wp-content/themes/educationaltheme/js/bootstrap.min7bcd.js?ver=4.8.3";?>'></script>
+<link rel='stylesheet' id='bootstrap-css'  href='<?php echo "/school/pages/wp-content/themes/educationaltheme/css/bootstrap.min7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='<?php echo "/school/pages/wp-content/themes/educationaltheme/css/font-awesome.min7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='<?php echo "/school/pages/wp-content/themes/educationaltheme/css/responsive7bcd.css?ver=4.8.3";?>' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-css'  href='<?php echo "/school/pages/wp-content/themes/educationaltheme/css/menu7bcd.css?ver=4.8.3" ;?>' type='text/css' media='all' />
+<link rel='stylesheet' id='stylesheet-css'  href='<?php echo "/school/pages/wp-content/themes/educationaltheme/css/stylesheet7bcd.html?ver=4.8.3";?>' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='<?php echo "/school/pages/wp-content/themes/educationaltheme/style7bcd.css?ver=4.8.3" ;?>' type='text/css' media='all' />
+<script type='text/javascript' src='<?php echo "/school/pages/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4";?>'></script>
+<script type='text/javascript' src='<?php echo "/school/pages/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1"; ?>'></script>
+<script type='text/javascript' src='<?php echo "/school/pages/wp-content/themes/educationaltheme/js/bootstrap.min7bcd.js?ver=4.8.3";?>'></script>
 <link rel='https://api.w.org/' href='wp-json/index.html' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
@@ -244,7 +244,7 @@ body {
 			
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 logo">
-					<a href="http://themesbazar.net/educational"><img src="<?php echo "/school/wp-content/themes/educationaltheme/images/banner.gif";?>" alt="Logo" width="100%"></a>
+					<a href="http://themesbazar.net/educational"><img src="<?php echo "/school/pages/wp-content/themes/educationaltheme/images/banner.gif";?>" alt="Logo" width="100%"></a>
 				</div>
 			</div>
 
@@ -340,7 +340,7 @@ body {
 									<div class="item active">
 										 <!-- Post Image Code Start--> 
 								<a href="#">
-								<img width="1000" height="300" src="<?php echo "/school/wp-content/uploads/2018/04/04.gif";?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								</a>
+								<img width="1000" height="300" src="<?php echo "/school/pages/wp-content/uploads/2018/04/04.gif";?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								</a>
 								<!-- Post Image Code Close-->
 			
 										 
@@ -349,7 +349,7 @@ body {
 																									<div class="item">
 										 <!-- Post Image Code Start--> 
 								<a href="#">
-								<img width="1000" height="300" src="<?php echo "/school/wp-content/uploads/2018/04/03.gif"; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								</a>
+								<img width="1000" height="300" src="<?php echo "/school/pages/wp-content/uploads/2018/04/03.gif"; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								</a>
 								<!-- Post Image Code Close-->
 										 <!-- <h4 class="centered"><a href="home-photo/%e0%a6%b9%e0%a7%8b%e0%a6%ae%e0%a6%aa%e0%a7%87%e0%a6%9c-%e0%a6%ab%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%e0%a6%be%e0%a6%b0%e0%a7%80-%e0%a6%a4%e0%a6%bf%e0%a6%a8/index.html">হোমপেজ ফটোগ্যালারী তিন</a></h4> -->
 									</div>
