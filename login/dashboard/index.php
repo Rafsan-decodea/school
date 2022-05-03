@@ -604,6 +604,6 @@ if ($_SESSION["uid"] == 0) {
 <?php include 'fotter.php'?>
 
 <a href="../../logout.php">logout</a>
-<?php 
+<?php
 }
 ?>

@@ -30,9 +30,9 @@ body {
 }
 
             </style>
-			
+
 				<div class="row">
-					<div class="single_page"> 
+					<div class="single_page">
 
         <div class="container loginbox">
             <div id="login-row" class="row justify-content-center align-items-center">
@@ -40,14 +40,14 @@ body {
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="../userauth/authuser.php" method="POST">
                             <h3 class="text-center text-info">Login</h3>
-                            <h4 class="text-center text-danger"><?php echo $_GET["message"]?></h4>
+                            <h4 class="text-center text-danger"><?php echo $_GET["message"] ?></h4>
                             <div class="form-group">
                                 <label for="username" class="text-info">Email:</label><br>
                                 <input type="text" name="email" id="username" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <!-- <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br> -->
@@ -62,16 +62,15 @@ body {
             </div>
         </div>
     </div>
-			          										
+
 
 						<div class="col-lg-1 col-md-1 col-sm-1"></div>
 					</div>
 				</div>
 
-		</div>	
+		</div>
 	</section>
-	
+
 <?php include '../fotter.php'?>
-		
-	
-	
+
+
