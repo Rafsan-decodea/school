@@ -1,3 +1,11 @@
+<?php
+function PageName()
+{ // See only Just Active Status
+    return substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+}
+
+$current_page = PageName();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,23 +17,23 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="/school/login/dashboard/plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -49,7 +57,7 @@
         <a href="#" class="nav-link">Contact</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="logout.php" class="nav-link">logout</a>
+        <a href="../../logout.php" class="nav-link">logout</a>
       </li>
     </ul>
 
@@ -179,7 +187,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/school/login/dashboard/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Shop Managment</span>
     </a>
 
@@ -213,7 +221,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item ">
-            <a href="" class="nav-link active">
+            <a href="/school/login/dashboard/index.php" class="nav-link <?php echo $current_page == 'index.php' ? 'active' : null ?>">
               <i class="nav-icon fab fa-500px"></i>
               <p>
                 Dashboard
@@ -222,23 +230,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link ">
+            <a href="/school/login/dashboard/users/teacher/seeprofile.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
+                SeeProfile
+                <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="./pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
+
 
         </ul>
       </nav>
