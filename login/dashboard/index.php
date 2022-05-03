@@ -13,7 +13,10 @@ if ($_SESSION["uid"] == 0) {
 
     ?>
 
- 
+   login As  Admin
+
+    <a href="../../logout.php">logout</a>
+
 
 <?php 
 }
