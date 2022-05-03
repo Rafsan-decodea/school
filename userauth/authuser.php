@@ -23,24 +23,24 @@ session_start();
    }
    else{
 
-      header("location:/school/index.php?message=Invalide Username Password");
+      header("location:/school/login/index.php?message=Invalide Username Password");
    
        
    }
 
    if (isset($_SESSION["id"]))// if complete User Authentication
    {
-      header("location:/school/login/dashboard/index.php");
+      header("location:/school/login/dashboard/index.php");// redirect This page
    //    unset($_SESSION["id"]);
    //   unset($_SESSION["uid"]);
    }
    else 
    {
-      header("location:/shop/index.php?message=Invalide Username Password");
+      header("location:/school/login/index.php?message=Invalide Username Password");
    }
  }
  else
  {
-   header("location:/shop/index.php?message=Fill Up From Properly");
+   header("location:/school/login/index.php?message=Fill Up From Properly");
  }
   ?>
