@@ -188,7 +188,31 @@ resize: horizontal; width:500px;" ></textarea>
     <div class="container border border-primary">
         <div class="row">
             <div class="col">
-                Container Right
+               
+            <div class="container">
+            <div class="row">
+               <h3>Heading Scroll Bar </h3>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="widget-area no-padding blank">
+                     <div class="status-upload">
+                        <form>
+                           <textarea placeholder="What are you doing right now?" style="resize: vertical;
+resize: horizontal; width:500px;" ></textarea>
+                           <ul>
+                             
+                           </ul>
+                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
+                        </form>
+                     </div>
+                     <!-- Status Upload  -->
+                  </div>
+                  <!-- Widget Area -->
+               </div>
+            </div>
+         </div>
+         
             </div>
         </div>
     </div>
