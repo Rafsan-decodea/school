@@ -69,7 +69,7 @@ body {
 				</div>
 
 		</div>
-	</section>
+
 
 <?php include '../fotter.php'?>
 

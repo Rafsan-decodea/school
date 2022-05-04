@@ -1,10 +1,23 @@
 <?php
+session_start();
+// This is dashboard
+
 function PageName()
 { // See only Just Active Status
     return substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 }
 
 $current_page = PageName();
+
+
+
+if (!isset($_SESSION["id"])) {
+    header("location:/school/index.php");
+
+}
+
+if ($_SESSION["uid"] == 0) {
+
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +47,7 @@ $current_page = PageName();
   <link rel="stylesheet" href="/school/login/dashboard/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/school/login/dashboard/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -49,12 +63,6 @@ $current_page = PageName();
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="../../logout.php" class="nav-link">logout</a>
@@ -188,7 +196,7 @@ $current_page = PageName();
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="/school/login/dashboard/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Shop Managment</span>
+      <span class="brand-text font-weight-light">School Managment</span>
     </a>
 
     <!-- Sidebar -->
@@ -230,10 +238,10 @@ $current_page = PageName();
             </a>
           </li>
           <li class="nav-item">
-            <a href="/school/login/dashboard/users/teacher/seeprofile.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
+            <a href="/school/login/dashboard/users/teacher/makepost.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                SeeProfile
+                Make Post
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
@@ -263,3 +271,5 @@ $current_page = PageName();
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+
+    <?php  } ?>

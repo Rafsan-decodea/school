@@ -48,6 +48,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/school/login/dashboard/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="/school/login/dashboard/dist/js/pages/dashboard.js"></script>
 </body>
 </html>

@@ -598,12 +598,7 @@ if ($_SESSION["uid"] == 0) {
       </div><!-- /.container-fluid -->
     </section>
 
-
-
-
-<?php include 'fotter.php'?>
-
-<a href="../../logout.php">logout</a>
 <?php
 }
+
 ?>
