@@ -326,7 +326,7 @@ body {
 	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a title="সার্কুলার" href="%e0%a6%b8%e0%a6%be%e0%a6%b0%e0%a7%8d%e0%a6%95%e0%a7%81%e0%a6%b2%e0%a6%be%e0%a6%b0/index.html">সার্কুলার</a></li>
 </ul>
 </li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a title="যোগাযোগ" href="%e0%a6%af%e0%a7%8b%e0%a6%97%e0%a6%be%e0%a6%af%e0%a7%8b%e0%a6%97/index.html">যোগাযোগ</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a title="যোগাযোগ" href="/school/login">Login</a></li>
 </ul></div>						</div>
 					</nav>
 				</div>
