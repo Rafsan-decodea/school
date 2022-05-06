@@ -188,30 +188,29 @@
 				
 									
 				<!----------__________ Notice start ___________------------>
-				
+			
 					
 				<h4 class="catagory_title_5"> নোটিশ বোর্ড</h4>	
 				<div class="notice_box">
+			
 					<marquee direction = "up" scrollamount="3px" onmouseover="this.stop()" onmouseout="this.start()">
-						<ul>
-														
-                                <li><a href="notice/%e0%a6%86%e0%a6%97%e0%a6%be%e0%a6%ae%e0%a7%80-%e0%a6%a8%e0%a6%bf%e0%a6%b0%e0%a7%8d%e0%a6%ac%e0%a6%be%e0%a6%9a%e0%a6%a8%e0%a7%80-%e0%a6%aa%e0%a6%b0%e0%a7%80%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%be/index.html">আগামী নির্বাচনী পরীক্ষা ৩১ মার্চের পরিবর্তে ৫ জুন অনুষ্ঠিত হবে</a></li>
-                               							
-                                <li><a href="notice/%e0%a6%86%e0%a6%97%e0%a6%be%e0%a6%ae%e0%a7%80-%e0%a7%a7%e0%a7%a8-%e0%a6%8f%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%b2-%e0%a6%ac%e0%a6%bf%e0%a6%9c%e0%a7%8d%e0%a6%9e%e0%a6%be%e0%a6%a8-%e0%a6%ac/index.html">আগামী ১২ এপ্রিল বিজ্ঞান বিভাগের পরীক্ষা</a></li>
-                               							
-                                <li><a href="notice/%e0%a6%86%e0%a6%97%e0%a6%be%e0%a6%ae%e0%a7%80-%e0%a7%a9%e0%a7%a7-%e0%a6%ae%e0%a6%be%e0%a6%b0%e0%a7%8d%e0%a6%9a%e0%a7%87%e0%a6%b0-%e0%a6%ae%e0%a6%a7%e0%a7%8d%e0%a6%af%e0%a7%87-%e0%a6%b8%e0%a6%95/index.html">আগামী ৩১ মার্চের মধ্যে সকল ফি পরিশোধ করতে হবে</a></li>
-                               							
-                                <li><a href="notice/%e0%a6%b8%e0%a7%8d%e0%a6%95%e0%a7%81%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%ad%e0%a6%bf%e0%a6%a4%e0%a6%b0-%e0%a6%ae%e0%a7%8b%e0%a6%ac%e0%a6%be%e0%a6%87%e0%a6%b2-%e0%a6%ac%e0%a7%8d%e0%a6%af%e0%a6%ac/index.html">স্কুলের ভিতর মোবাইল ব্যবহার করা সম্পূর্ণ নিষেধ</a></li>
-                               							
-                                <li><a href="notice/%e0%a6%8f%e0%a6%87-%e0%a6%b8%e0%a7%8d%e0%a6%95%e0%a7%81%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%a1%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%87%e0%a6%a8%e0%a6%9f%e0%a6%bf-%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a7%9f/index.html">এই স্কুলের ডিজাইনটি ক্রয় করতে যোগাযোগ করুন : ০১৭৩২৬৬৭৩৬৪</a></li>
-                               							
-                                <li><a href="notice/%e0%a6%86%e0%a6%ae%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8/index.html">আমাদের শিক্ষা প্রতিষ্ঠানে আপনাদের স্বাগতম</a></li>
-                                
-                            </ul>
+						
+					     <ul>
+						 <?php 
+				   
+				           $sql = "select * from notice_board";
+				           $result = $db->query($sql);
+                           while($row = $result->fetch_assoc())
+				               {
+
+				           ?>
+							<li><?php echo $row['notice'];?></a></li>
+			            	<?php } ?>
+                         </ul>
 					</marquee>
                 </div>
 				
-				
+			
 				
 				<!----------__________ facebook start ___________------------>
 				
