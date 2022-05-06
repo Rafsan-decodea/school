@@ -1,9 +1,9 @@
 
 <?php 
 
-//  include ($_SERVER['DOCUMENT_ROOT']."/school/db/db.php");
+ include ($_SERVER['DOCUMENT_ROOT']."/school/db/db.php");
 
-//  $db = new DB();
+ $db = new DB();
 
  
 
@@ -384,9 +384,9 @@ body {
 			<!----------__________ scrool start ___________------------>
 			<?php 
 			  
-			//   $sql = "select heading from posts ";
-			//   $result = $db->query($sql);
-			//   $data = mysqli_fetch_array($result);
+			  $sql = "select * from posts ";
+			  $result = $db->query($sql);
+			  $data = mysqli_fetch_array($result);
 			?>
 			
 			<div class="row">
@@ -395,8 +395,7 @@ body {
 						ঘোষনা					</div>
 					<div class="col-lg-10 col-md-10 col-sm-10 scrool_2">
 						<marquee direction = "left" scrollamount="4px" onmouseover="this.stop()" onmouseout="this.start()">
-												<i class="fa fa-stop-circle"></i> <a href="announcement/%e0%a6%8f%e0%a6%87-%e0%a6%b8%e0%a7%8d%e0%a6%95%e0%a7%81%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%a1%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%87%e0%a6%a8%e0%a6%9f%e0%a6%bf-%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a7%9f/index.html">এই স্কুলের ডিজাইনটি ক্রয় করতে যোগাযোগ করুন : ০১৭৩২৬৬৭৩৬৪</a>
-												<i class="fa fa-stop-circle"></i> <a href="announcement/%e0%a6%86%e0%a6%ae%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8/index.html">আমাদের শিক্ষা প্রতিষ্ঠানে আপনাদের স্বাগতম।</a>
+												<i class="fa fa-stop-circle"></i> <a href="announcement/%e0%a6%86%e0%a6%ae%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8/index.html"><?php echo $data['heading'];?></a>
 												</marquee>
 					</div>
 				</div>
