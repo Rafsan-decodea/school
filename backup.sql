@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: school
 -- ------------------------------------------------------
--- Server version	8.0.29-0ubuntu0.22.04.1
+-- Server version	8.0.29-0ubuntu0.22.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +28,9 @@ CREATE TABLE `posts` (
   `noticboard` varchar(700) DEFAULT NULL,
   `history` varchar(700) DEFAULT NULL,
   `principletalk` varchar(700) DEFAULT NULL,
+  `principleimage` varchar(100) DEFAULT NULL,
   `preprincipletalk` varchar(700) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `preprincipleimage` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -78,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-04 22:03:22
+-- Dump completed on 2022-05-06 14:51:19
