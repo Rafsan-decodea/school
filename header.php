@@ -1,4 +1,13 @@
 
+<?php 
+
+//  include ($_SERVER['DOCUMENT_ROOT']."/school/db/db.php");
+
+//  $db = new DB();
+
+ 
+
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -373,6 +382,12 @@ body {
 			   
 						
 			<!----------__________ scrool start ___________------------>
+			<?php 
+			  
+			//   $sql = "select heading from posts ";
+			//   $result = $db->query($sql);
+			//   $data = mysqli_fetch_array($result);
+			?>
 			
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 scrool">							

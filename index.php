@@ -1,4 +1,13 @@
 <?php include 'header.php'?>		
+
+<?php 
+ include ($_SERVER['DOCUMENT_ROOT']."/school/db/db.php");
+
+ $db = new DB();
+
+ 
+
+?>
 			<!-----------------scrool close ------------------>
 			
 			
