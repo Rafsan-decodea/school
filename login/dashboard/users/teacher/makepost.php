@@ -195,7 +195,7 @@ resize: horizontal;height:100px; width:500px;" ><?php echo $data['heading'];?></
                                   {
                                   
 
-                                    toastr.success("Heading Update Success");
+                                    toastr.success("  ঘোসনা Update Success");
 
                                    }
 
@@ -264,7 +264,7 @@ resize: horizontal; height:100px;  width:500px;" ><?php echo $data['history']?><
                                   {
                                   
 
-                                    toastr.success("History Update Success");
+                                    toastr.success("ইতিহাস Update Success");
 
                                    }
 
@@ -331,7 +331,7 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
                                   {
                                   
 
-                                    toastr.success("principletalk Update Success");
+                                    toastr.success(" অধ্যক্ষের বাণী  Update Success");
 
                                    }
 
@@ -361,6 +361,9 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
                <h3>উপধ্যক্ষের বাণী </h3>
             </div>
             <div class="row">
+
+            <input id="uploadImage" type="file" accept="image/*" name="image" />
+<div id="preview"><img src="filed.png" /></div><br>
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
@@ -371,16 +374,44 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
                       $data = mysqli_fetch_array($result);
                      
                      ?>
-                           <textarea id="principletalk" placeholder="What are you doing right now?" style="resize: vertical;
+                           <textarea id="preprincipletalk"  style="resize: vertical;
 resize: horizontal; height:100px; width:500px;" ><?php  echo $data['preprincipletalk']?></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
+                           <button type="submit" onclick="updateprePrinciple()" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
                     
                      </div>
                      <!-- Status Upload  -->
                   </div>
+                  <!-- Preprinciple Talk Script  -->
+                  <script>
+                      function updateprePrinciple()
+                        {
+            
+                          var  preprincipletalk = $("#preprincipletalk").val();
+                          var image = $("#uploadImage").val();
+
+                        $.ajax({
+                              url : "action.php",
+                              type : 'post',
+                              data : {
+                                 preprincipletalkSend: preprincipletalk,
+                                 sendImage: image,
+
+                               },
+                              success:function(data,status)
+                                  {
+                                   alert(data);
+                                   alert(image);
+
+                                    toastr.success(" উপধ্যক্ষের বাণী  Update Success");
+
+                                   }
+
+                              });
+                            }
+                     </script>
                   <!-- Widget Area -->
                </div>
             </div>

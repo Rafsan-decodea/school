@@ -52,11 +52,27 @@ class Post{
         }
 
     }
+    public  function preprincipletalkUpdate()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if(isset($_POST['preprincipletalkSend']) && isset($_FILES['sendImage']))
+        {
+            $img_name = $_FILES['sendImage'];
+            echo $img_name;
+            
+            $sql = "update posts set  preprincipletalk  =   '$preprincipletalkSend'";
+            $db->update($sql);
+        }
+
+    }
 }
 
 $post = new Post();
 $post->headingUpdate();
 $post->historyUpdate();
 $post->principletalkUpdate();
+$post->preprincipletalkUpdate();
 
 ?>
