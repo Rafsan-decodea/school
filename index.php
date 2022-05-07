@@ -29,20 +29,14 @@
 								<img width="741" height="320" src="pages/wp-content/uploads/2018/04/5.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://themesbazar.net/educational/wp-content/uploads/2018/04/5.jpg 741w, http://themesbazar.net/educational/wp-content/uploads/2018/04/5-300x130.jpg 300w" sizes="(max-width: 741px) 100vw, 741px" />								
 								<p> <?php echo $data['history']; ?></a></span></p>
 							</div>
-													</div>
+				     	</div>
 					</div>
-					
-					   
-							
-					
 						</br>
 					
 								
 					<div class="row">
 
 						<div class="col-lg-6 col-md-6 col-sm-6">
-						
-						
 													
 							<h4 class="catagory_title"> অধ্যক্ষের বাণী</h4>
 							

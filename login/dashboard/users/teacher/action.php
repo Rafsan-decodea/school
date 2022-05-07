@@ -27,9 +27,36 @@ class Post{
         }
 
     }
+
+    public  function historyUpdate()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if(isset($_POST['historySend']))
+        {
+            $sql = "update posts set history =   '$historySend'";
+            $db->update($sql);
+        }
+
+    }
+    public  function principletalkUpdate()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if(isset($_POST['principletalkSend']))
+        {
+            $sql = "update posts set  principletalk =   '$principletalkSend'";
+            $db->update($sql);
+        }
+
+    }
 }
 
 $post = new Post();
 $post->headingUpdate();
+$post->historyUpdate();
+$post->principletalkUpdate();
 
 ?>

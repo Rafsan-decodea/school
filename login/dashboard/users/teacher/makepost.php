@@ -154,7 +154,7 @@ margin-right: 7px;
       <div class="col">
          <div class="container">
             <div class="row">
-               <h3>Heading Scroll Bar </h3>
+               <h3>ঘোসনা </h3>
             </div>
             <div class="row">
                <div class="col-md-6">
@@ -193,7 +193,7 @@ resize: horizontal;height:100px; width:500px;" ><?php echo $data['heading'];?></
                                },
                               success:function(data,status)
                                   {
-                                    // alert(data);
+                                  
 
                                     toastr.success("Heading Update Success");
 
@@ -224,23 +224,53 @@ resize: horizontal;height:100px; width:500px;" ><?php echo $data['heading'];?></
                
             <div class="container">
             <div class="row">
-               <h3>Heading Scroll Bar </h3>
+               <h3>ইতিহাস </h3>
             </div>
             <div class="row">
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
-                        <form>
-                           <textarea placeholder="What are you doing right now?" style="resize: vertical;
-resize: horizontal; width:500px;" ></textarea>
+                     <?php 
+                      
+                      $sql = "select * from posts";
+                      $result = $db->query($sql);
+                      $data = mysqli_fetch_array($result);
+                     
+                     ?>
+                           <textarea id="history" placeholder="What are you doing right now?" style="resize: vertical;
+resize: horizontal; height:100px;  width:500px;" ><?php echo $data['history']?></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
-                        </form>
+                           <button type="submit" onclick="updateHistory()" class="btn btn-success green"><i class="fa fa-share"></i>Updata</button>
                      </div>
                      <!-- Status Upload  -->
                   </div>
+                  <!--  Update History Status  -->
+                  <script>
+                      function updateHistory()
+                        {
+            
+                          var  history = $("#history").val();
+
+                        $.ajax({
+                              url : "action.php",
+                              type : 'post',
+                              data : {
+                                   historySend:history,
+
+                               },
+                              success:function(data,status)
+                                  {
+                                  
+
+                                    toastr.success("History Update Success");
+
+                                   }
+
+                              });
+                            }
+                     </script>
                   <!-- Widget Area -->
                </div>
             </div>
@@ -259,23 +289,55 @@ resize: horizontal; width:500px;" ></textarea>
       <div class="col">
          <div class="container">
             <div class="row">
-               <h3>Heading Scroll Bar </h3>
+               <h3>অধ্যক্ষের বাণী </h3>
             </div>
             <div class="row">
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
-                        <form>
-                           <textarea placeholder="What are you doing right now?" style="resize: vertical;
-resize: horizontal; width:500px;" ></textarea>
+                     <?php 
+                      
+                      $sql = "select * from posts";
+                      $result = $db->query($sql);
+                      $data = mysqli_fetch_array($result);
+                     
+                     ?>
+                      
+                           <textarea id="principletalk" placeholder="What are you doing right now?" style="resize: vertical;
+resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk']?></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
-                        </form>
+                           <button  onclick="updatePrinciple()" type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
+                     
                      </div>
                      <!-- Status Upload  -->
                   </div>
+                  <!-- Script for update Principle bani -->
+                  <script>
+                      function updatePrinciple()
+                        {
+            
+                          var  principletalk = $("#principletalk").val();
+
+                        $.ajax({
+                              url : "action.php",
+                              type : 'post',
+                              data : {
+                                 principletalkSend:principletalk,
+
+                               },
+                              success:function(data,status)
+                                  {
+                                  
+
+                                    toastr.success("principletalk Update Success");
+
+                                   }
+
+                              });
+                            }
+                     </script>
                   <!-- Widget Area -->
                </div>
             </div>
@@ -296,20 +358,26 @@ resize: horizontal; width:500px;" ></textarea>
                
             <div class="container">
             <div class="row">
-               <h3>Heading Scroll Bar </h3>
+               <h3>উপধ্যক্ষের বাণী </h3>
             </div>
             <div class="row">
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
-                        <form>
-                           <textarea placeholder="What are you doing right now?" style="resize: vertical;
-resize: horizontal; width:500px;" ></textarea>
+                     <?php 
+                      
+                      $sql = "select * from posts";
+                      $result = $db->query($sql);
+                      $data = mysqli_fetch_array($result);
+                     
+                     ?>
+                           <textarea id="principletalk" placeholder="What are you doing right now?" style="resize: vertical;
+resize: horizontal; height:100px; width:500px;" ><?php  echo $data['preprincipletalk']?></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
-                        </form>
+                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
+                    
                      </div>
                      <!-- Status Upload  -->
                   </div>
