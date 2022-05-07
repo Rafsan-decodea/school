@@ -160,15 +160,48 @@ margin-right: 7px;
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
-                        <form>
-                           <textarea placeholder="What are you doing right now?" style="resize: vertical;
-resize: horizontal; width:500px;" ></textarea>
+                      <?php 
+                      
+                       $sql = "select * from posts";
+                       $result = $db->query($sql);
+                       $data = mysqli_fetch_array($result);
+                      
+                      ?>
+                           <textarea id="heading" placeholder="What are you doing right now?" style="resize: vertical;
+resize: horizontal;height:100px; width:500px;" ><?php echo $data['heading'];?></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
-                        </form>
+                           <button type="submit" onclick="updateHeading();" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
+                       
                      </div>
+
+                     <!-- Heading Post Java Script  -->
+                     <script>
+                      function updateHeading()
+                        {
+                        
+                             
+                          var  heading = $("#heading").val();
+
+                        $.ajax({
+                              url : "action.php",
+                              type : 'post',
+                              data : {
+                                   headingSend:heading,
+
+                               },
+                              success:function(data,status)
+                                  {
+                                    // alert(data);
+
+                                    toastr.success("Heading Update Success");
+
+                                   }
+
+                              });
+                            }
+                     </script>
                      <!-- Status Upload  -->
                   </div>
                   <!-- Widget Area -->
