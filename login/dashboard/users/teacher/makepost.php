@@ -365,10 +365,16 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
 
             <input id="upload_file" type="file" accept="image/*" name="upload_file" />
           <br>
-           
+          <?php
+								  
+				$sql = "select preprincipleimage	 from posts ";
+				$result = $db->query($sql);
+				$image = mysqli_fetch_array($result);
+
+				?>
          <div id="preview">
             <div class="card" id="image_preview" style="width: 18rem;">
-               <img src="..." class="card-img-top" alt="...">
+               <img src="<?php echo "/school/images/".$image['preprincipleimage'];?>" class="card-img-top" alt="...">
  
                 </div>
             </div>

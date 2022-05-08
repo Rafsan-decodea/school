@@ -41,6 +41,11 @@
 							<h4 class="catagory_title"> অধ্যক্ষের বাণী</h4>
 							
 							<div class="profile">
+								<?php 
+								 
+								  $sql = "select ";
+								
+								?>
 								
 								<img width="400" height="500" src="pages/wp-content/uploads/2018/04/12.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
 								<p> <?php echo $data['principletalk'];?></a></span></p>
@@ -51,8 +56,14 @@
 							<h4 class="catagory_title"> উপধ্যক্ষের বাণী</h4>
 							
 							<div class="profile">
-								
-								<img width="400" height="500" src="pages/wp-content/uploads/2018/04/08.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
+								<?php
+								  
+								  $sql = "select preprincipleimage	 from posts ";
+								  $result = $db->query($sql);
+								  $image = mysqli_fetch_array($result);
+
+								?>
+								<img width="400" height="500" src="<?php echo "/school/images/". $image['preprincipleimage'] ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
 								<p><?php echo $data['preprincipletalk'];?> </a></span></p>
 							</div>
 													</div>
