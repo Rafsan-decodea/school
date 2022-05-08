@@ -57,13 +57,27 @@ class Post{
         $db = new DB();
         extract($_POST);
 
-        if(isset($_POST['preprincipletalkSend']) && isset($_FILES['sendImage']))
+        if(isset($_POST['preprincipletalk']) && isset($_FILES['upload_file']))
         {
-            $img_name = $_FILES['sendImage'];
-            echo $img_name;
+            $filename = $_FILES['upload_file']['name'];
+            $extension = pathinfo($filename,PATHINFO_EXTENSION);
+            $valid_extension = array("jpg","jpeg","png","gif");
+
+            if(in_array($extension,$valid_extension))
+            {
+                $new_name = rand() . "." . $extension;
+                $path =  "/images/" . $new_name;
+                move_uploaded_file($_FILES['upload_file']['tmp_name'],$path);
+
+            }
+            else{
+
+                echo "Invalid Filew";
+            }
+
             
-            $sql = "update posts set  preprincipletalk  =   '$preprincipletalkSend'";
-            $db->update($sql);
+            // $sql = "update posts set  preprincipletalk  =   '$preprincipletalkSend'";
+            // $db->update($sql);
         }
 
     }

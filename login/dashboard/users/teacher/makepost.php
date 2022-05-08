@@ -133,7 +133,7 @@ margin-right: 7px;
 
 </style>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <div class="col-sm-6">
             <h1 class="m-0">Make Post</h1>
           </div><!-- /.col -->
@@ -360,13 +360,22 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
             <div class="row">
                <h3>উপধ্যক্ষের বাণী </h3>
             </div>
+      <form id="submitform">
             <div class="row">
 
-            <input id="uploadImage" type="file" accept="image/*" name="image" />
-<div id="preview"><img src="filed.png" /></div><br>
+            <input id="upload_file" type="file" accept="image/*" name="upload_file" />
+          <br>
+           
+         <div id="preview">
+            <div class="card" id="image_preview" style="width: 18rem;">
+               <img src="..." class="card-img-top" alt="...">
+ 
+                </div>
+            </div>
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
+                  
                      <?php 
                       
                       $sql = "select * from posts";
@@ -374,43 +383,76 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
                       $data = mysqli_fetch_array($result);
                      
                      ?>
-                           <textarea id="preprincipletalk"  style="resize: vertical;
+                           <textarea id="preprincipletalk" name="preprincipletalk" style="resize: vertical;
 resize: horizontal; height:100px; width:500px;" ><?php  echo $data['preprincipletalk']?></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" onclick="updateprePrinciple()" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
+                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Update</button>
                     
                      </div>
+                  </form>
                      <!-- Status Upload  -->
                   </div>
+                 
                   <!-- Preprinciple Talk Script  -->
                   <script>
-                      function updateprePrinciple()
-                        {
-            
-                          var  preprincipletalk = $("#preprincipletalk").val();
-                          var image = $("#uploadImage").val();
+                     
+                  $(document).ready(function(){
+                     $("#submitform").on("submit",function(e){
 
+                        e.preventDefault();
+                        
+                        var formData = new FormData(this);
+                        
                         $.ajax({
-                              url : "action.php",
-                              type : 'post',
-                              data : {
-                                 preprincipletalkSend: preprincipletalk,
-                                 sendImage: image,
 
-                               },
-                              success:function(data,status)
-                                  {
-                                   alert(data);
-                                   alert(image);
+                           url : "action.php",
+                           type: "POST",
+                           data : formData,
+                           contentType: false,
+                           processData: false,
+                           success:function(data)
+                           {
+                              alert(data);
+                             // $("#image_preview").html(data);
+                             // $("#upload_file").val('');
 
-                                    toastr.success(" উপধ্যক্ষের বাণী  Update Success");
 
-                                   }
+                           }
+                        })
+                        
+                      
+                     })
+                  })
 
-                              });
-                            }
+                       
+
+                     //  function updateprePrinciple()
+                     //    {
+            
+                     //      var  preprincipletalk = $("#preprincipletalk").val();
+                     //      var image = $("#uploadImage").val();
+
+                     //    $.ajax({
+                     //          url : "action.php",
+                     //          type : 'post',
+                     //          data : {
+                     //             preprincipletalkSend: preprincipletalk,
+                     //             sendImage: image,
+
+                     //           },
+                     //          success:function(data,status)
+                     //              {
+                     //               alert(data);
+                     //               alert(image);
+
+                     //                toastr.success(" উপধ্যক্ষের বাণী  Update Success");
+
+                     //               }
+
+                     //          });
+                     //        }
                      </script>
                   <!-- Widget Area -->
                </div>
