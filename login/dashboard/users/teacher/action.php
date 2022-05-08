@@ -66,18 +66,21 @@ class Post{
             if(in_array($extension,$valid_extension))
             {
                 $new_name = rand() . "." . $extension;
-                $path =  "/images/" . $new_name;
-                move_uploaded_file($_FILES['upload_file']['tmp_name'],$path);
+                $path =  $_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $new_name;
+               if(move_uploaded_file($_FILES['upload_file']['tmp_name'],$path))
+               {
+                    $sql = "";
+               }
 
             }
             else{
 
-                echo "Invalid Filew";
+               
             }
 
             
-            // $sql = "update posts set  preprincipletalk  =   '$preprincipletalkSend'";
-            // $db->update($sql);
+            $sql = "update posts set  preprincipletalk  =   '$preprincipletalk'";
+            $db->update($sql);
         }
 
     }

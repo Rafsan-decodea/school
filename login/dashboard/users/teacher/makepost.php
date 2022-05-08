@@ -302,7 +302,7 @@ resize: horizontal; height:100px;  width:500px;" ><?php echo $data['history']?><
                       $data = mysqli_fetch_array($result);
                      
                      ?>
-                      
+                     
                            <textarea id="principletalk" placeholder="What are you doing right now?" style="resize: vertical;
 resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk']?></textarea>
                            <ul>
