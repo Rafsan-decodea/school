@@ -69,7 +69,9 @@ class Post{
                 $path =  $_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $new_name;
                if(move_uploaded_file($_FILES['upload_file']['tmp_name'],$path))
                {
-                    $sql = "";
+                    $sql = "update posts set preprincipleimage = '$new_name' ";
+                    $db->query($sql);
+                    echo "seccess";
                }
 
             }
