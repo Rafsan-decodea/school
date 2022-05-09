@@ -82,7 +82,7 @@ body {
 	border-radius:2px;
 }
 .scrool_1{
-	padding:5px;
+	padding:7px;
 	background:#138FDE;
 	background: -webkit-linear-gradient(-90deg, #138FDE, #003CA9);
 	background: -o-linear-gradient(-90deg, #138FDE, #003CA9);
@@ -355,7 +355,7 @@ body {
 										 
 										 </h4>
 									</div>
-																									<div class="item">
+						<div class="item">
 										 <!-- Post Image Code Start--> 
 								<a href="#">
 								<img width="1000" height="300" src="<?php echo "/school/pages/wp-content/uploads/2018/04/03.gif"; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								</a>
@@ -395,7 +395,7 @@ body {
 						ঘোষনা					</div>
 					<div class="col-lg-10 col-md-10 col-sm-10 scrool_2">
 						<marquee direction = "left" scrollamount="4px" onmouseover="this.stop()" onmouseout="this.start()">
-												<i class="fa fa-stop-circle"></i> <a href="announcement/%e0%a6%86%e0%a6%ae%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8/index.html"><?php echo $data['heading'];?></a>
+												<i class="fa fa-stop-circle"></i><?php echo $data['heading'];?></a>
 												</marquee>
 					</div>
 				</div>

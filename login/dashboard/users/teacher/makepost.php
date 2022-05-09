@@ -352,7 +352,7 @@ resize: horizontal; height:100px; width:500px;" ><?php echo $data['principletalk
                            processData: false,
                            success:function(data)
                            {
-                             alert(data);
+                            // alert(data);
                              // $("#image_preview").html(data);
                              // $("#upload_file").val('');
                              toastr.success(" অধ্যক্ষের বাণী Update Success");
@@ -479,19 +479,19 @@ resize: horizontal; height:100px; width:500px;" ><?php  echo $data['preprinciple
       <div class="col">
          <div class="container">
             <div class="row">
-               <h3>Heading Scroll Bar </h3>
+               <h3>নোটিস সমুহ</h3>
             </div>
             <div class="row">
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
                         <form>
-                           <textarea placeholder="What are you doing right now?" style="resize: vertical;
+                           <textarea id="all_notice" placeholder="What are you doing right now?" style="resize: vertical;
 resize: horizontal; width:500px;" ></textarea>
                            <ul>
                              
                            </ul>
-                           <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
+                           <button  type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
                         </form>
                      </div>
                      <!-- Status Upload  -->
@@ -499,6 +499,31 @@ resize: horizontal; width:500px;" ></textarea>
                   <!-- Widget Area -->
                </div>
             </div>
+            <!-- Notice Script -->
+            <script>
+                 function addnotice()
+                        {
+            
+                          var notice = $("#all_notice").val();
+
+                        $.ajax({
+                              url : "action.php",
+                              type : 'post',
+                              data : {
+                                   historySend:history,
+
+                               },
+                              success:function(data,status)
+                                  {
+                                  
+
+                                    toastr.success("ইতিহাস Update Success");
+
+                                   }
+
+                              });
+                            }
+            </script>
          </div>
       </div>
    </div>
