@@ -115,6 +115,19 @@ class Post{
         }
 
     }
+
+    public function  addNotice()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if(isset($_POST['noticeSend']))
+        {
+           $sql = "INSERT INTO `notice_board` (`id`, `notice`) VALUES (NULL,$noticeSend)";
+           $db->insert($sql);
+        }
+          
+    }
 }
 
 $post = new Post();
@@ -122,5 +135,6 @@ $post->headingUpdate();
 $post->historyUpdate();
 $post->principletalkUpdate();
 $post->preprincipletalkUpdate();
+$post->addNotice();
 
 ?>

@@ -481,6 +481,15 @@ resize: horizontal; height:100px; width:500px;" ><?php  echo $data['preprinciple
             <div class="row">
                <h3>নোটিস সমুহ</h3>
             </div>
+            <?php 
+              
+              $sql = "select * from notice_board";
+              $result = $db->query($sql);
+              while($row = $result->fetch_assoc())
+              {
+             ?>
+           <p> &#8594;<?php echo $row['notice']?> delete</p>
+            <?php }?>
             <div class="row">
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
@@ -491,7 +500,7 @@ resize: horizontal; width:500px;" ></textarea>
                            <ul>
                              
                            </ul>
-                           <button  type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Post</button>
+                           <button  type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Add </button>
                         </form>
                      </div>
                      <!-- Status Upload  -->
@@ -510,14 +519,13 @@ resize: horizontal; width:500px;" ></textarea>
                               url : "action.php",
                               type : 'post',
                               data : {
-                                   historySend:history,
+                                   noticeSend:notice,
 
                                },
                               success:function(data,status)
                                   {
-                                  
-
-                                    toastr.success("ইতিহাস Update Success");
+     
+                                    toastr.success("নোটিস Added Success");
 
                                    }
 
