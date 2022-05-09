@@ -123,8 +123,15 @@ class Post{
 
         if(isset($_POST['noticeSend']))
         {
-           $sql = "INSERT INTO `notice_board` (`id`, `notice`) VALUES (NULL,'$noticeSend' )";
-           $db->insert($sql);
+          if(empty($noticeSend))
+          {
+            //echo "data is Emplty " . $noticeSend;
+          }
+          else{
+            $sql = "INSERT INTO `notice_board` (`id`, `notice`) VALUES (NULL,'$noticeSend' )";
+            $db->insert($sql);
+          }
+          
         }
           
     }

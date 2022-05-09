@@ -525,9 +525,16 @@ resize: horizontal; width:500px;" ></textarea>
                                },
                               success:function(data,status)
                                   {
-                                     //alert(data);
-     
-                                    toastr.success("নোটিস Added Success");
+                                   //  alert(data);
+                                    if(notice == "")
+                                    {
+                                       
+                                       toastr.error("Empty নোটিস Not Accepted ");
+                                    }
+                                    else{
+                                       toastr.success("নোটিস Added Success");
+                                    }
+                                    
 
                                    }
 
