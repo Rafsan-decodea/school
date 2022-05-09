@@ -149,34 +149,41 @@ margin-right: 7px;
 
 <section class="content">
 
+
+
+<?php 
+
+  $sql = "select * from school_users where uid = 1";
+  $result = $db->query($sql);
+
+?>
+
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">serial</th>
+      <th scope="col">image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Father Name </th>
+      <th scope="col">Mother Name </th>
+      <th scope="col">phone </th>
+      <th scope="col">location</th>
+      <th scope="col">Entry Date </th>
     </tr>
   </thead>
   <tbody>
+<?php  while ($row = $result->fetch_assoc()) {?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $number += 1 ?></th>
+      <td><img src="/school/images/1310883125.jpg" height="50" width="50" class="rounded-circle"/></td>
+      <td><?php echo $row['name']?></td>
+      <td><?php echo $row['fathername']?></td>
+      <td><?php echo $row['mothername']?></td>
+      <td><?php echo $row['phone']?></td>
+      <td><?php echo $row['location']?></td>
+      <td><?php echo $row['sellary']?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
 
