@@ -43,11 +43,13 @@
 							<div class="profile">
 								<?php 
 								 
-								  $sql = "select ";
+								 $sql = "select  principleimage	 from posts ";
+								  $result = $db->query($sql);
+								  $image = mysqli_fetch_array($result);
 								
 								?>
 								
-								<img width="400" height="500" src="pages/wp-content/uploads/2018/04/12.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
+								<img width="400" height="500" src="<?php echo "/school/images/". $image['principleimage'] ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />								
 								<p> <?php echo $data['principletalk'];?></a></span></p>
 							</div>
 													</div>

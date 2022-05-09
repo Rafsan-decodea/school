@@ -253,7 +253,7 @@ body {
 			
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 logo">
-					<a href="http://themesbazar.net/educational"><img src="<?php echo "/school/pages/wp-content/themes/educationaltheme/images/banner.gif";?>" alt="Logo" width="100%"></a>
+					<a href="#"><img src="<?php echo "/school/pages/wp-content/themes/educationaltheme/images/banner.gif";?>" alt="Logo" width="100%"></a>
 				</div>
 			</div>
 

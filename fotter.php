@@ -40,7 +40,7 @@ function topFunction() {
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 root_02">
-						Design & Developed BY <a href='http://www.themesbazar.com/' target='_blank' title='Mobile : 01732-667364'>ThemesBazar.Com</a>					</div>
+						Design & Developed BY <a href='http://www.themesbazar.com/' target='_blank' title='Mobile : 01818144463'>MD Rafsan</a>					</div>
 				</div>	
 			</div>
 		</div>	
