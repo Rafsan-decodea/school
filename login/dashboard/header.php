@@ -65,7 +65,7 @@ if ($_SESSION["uid"] == 0) {
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../logout.php" class="nav-link">logout</a>
+        <a href="/school/logout.php" class="nav-link">logout</a>
       </li>
     </ul>
 
@@ -238,7 +238,7 @@ if ($_SESSION["uid"] == 0) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="/school/login/dashboard/users/teacher/makepost.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
+            <a href="/school/login/dashboard/users/admin/makepost.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Make Post
