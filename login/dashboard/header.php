@@ -246,7 +246,17 @@ if ($_SESSION["uid"] == 0) {
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               Teachers Tab
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
 
+        
 
         </ul>
       </nav>
