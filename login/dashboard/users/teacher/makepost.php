@@ -488,20 +488,21 @@ resize: horizontal; height:100px; width:500px;" ><?php  echo $data['preprinciple
               while($row = $result->fetch_assoc())
               {
              ?>
-           <p> &#8594;<?php echo $row['notice']?> delete</p>
+             
+           <p> &#8594;<?php echo $row['notice']?> <button onclick="deletenotice(<?php echo $row['id']?>)" class="btn btn-danger" >delete</button></p>
             <?php }?>
             <div class="row">
                <div class="col-md-6">
                   <div class="widget-area no-padding blank">
                      <div class="status-upload">
-                        <form>
-                           <textarea id="all_notice" placeholder="What are you doing right now?" style="resize: vertical;
+                        
+                           <textarea id="all_notice" placeholder="Write Today Notice" style="resize: vertical;
 resize: horizontal; width:500px;" ></textarea>
                            <ul>
                              
                            </ul>
-                           <button  type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Add </button>
-                        </form>
+                           <button onclick="addnotice()"  type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Add </button>
+                        
                      </div>
                      <!-- Status Upload  -->
                   </div>
@@ -524,6 +525,7 @@ resize: horizontal; width:500px;" ></textarea>
                                },
                               success:function(data,status)
                                   {
+                                     //alert(data);
      
                                     toastr.success("নোটিস Added Success");
 
@@ -531,6 +533,26 @@ resize: horizontal; width:500px;" ></textarea>
 
                               });
                             }
+                  function deletenotice(id)
+                  {
+                     $.ajax({
+                              url : "action.php",
+                              type : 'post',
+                              data : {
+                                   noticeidSend:id,
+
+                               },
+                              success:function(data,status)
+                                  {
+                                     //alert(data);
+     
+                                    toastr.success("নোটিস Delete Success");
+
+                                   }
+
+                              })
+                     
+                  }
             </script>
          </div>
       </div>

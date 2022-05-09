@@ -123,10 +123,22 @@ class Post{
 
         if(isset($_POST['noticeSend']))
         {
-           $sql = "INSERT INTO `notice_board` (`id`, `notice`) VALUES (NULL,$noticeSend)";
+           $sql = "INSERT INTO `notice_board` (`id`, `notice`) VALUES (NULL,'$noticeSend' )";
            $db->insert($sql);
         }
           
+    }
+
+    public function deleteNotice()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if(isset($_POST['noticeidSend']))
+        {
+          $sql = "delete from notice_board WHERE id = $noticeidSend ";
+          $db->query($sql);
+        }
     }
 }
 
@@ -136,5 +148,5 @@ $post->historyUpdate();
 $post->principletalkUpdate();
 $post->preprincipletalkUpdate();
 $post->addNotice();
-
+$post->deleteNotice();
 ?>
