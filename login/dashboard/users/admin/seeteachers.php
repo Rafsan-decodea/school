@@ -137,7 +137,7 @@ margin-right: 7px;
 <div class="col-sm-6">
             <h1 class="m-0">Teachers Section</h1>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addteacher">
-           Add new Teacher 
+           Add new Teacher
         </button>
           </div><!-- /.col -->
           <div class="col-sm-6">
@@ -152,7 +152,7 @@ margin-right: 7px;
 
 <section class="content">
 
-
+<!-- Modal For adding Student  -->
 <div class="modal fade" id="addteacher" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -164,42 +164,46 @@ margin-right: 7px;
       </div>
       <div class="modal-body">
 
-
+  <form id="teacheraddsubmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" name="email" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <input type="email" class="form-control" name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="password" class="form-control" id="passwordid" placeholder="Password">
+      <input type="password" name="teacherpassword" class="form-control" id="passwordid" placeholder="Password">
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Mobile</label>
-      <input type="text" name="mobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
+      <input type="text" name="teachermobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Frist Name </label>
-      <input type="text" class="form-control" name="fristname" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="text" class="form-control" name="teacherfristname" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">LastName</label>
-      <input type="text" class="form-control" name="lastname" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="teacherlastname" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Location</label>
-      <input type="text" class="form-control" name="location" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
 
-   <button  onclick="addSeller();" data-bind="<?php $email = $var['email'];?>"  class="btn btn-primary">Submit</button>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Sellary</label>
+      <input type="text" class="form-control" name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
+      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
+   </div>
 
-
-
+   <button class="btn btn-primary">Submit</button>
+  </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -207,14 +211,51 @@ margin-right: 7px;
     </div>
   </div>
 </div>
+<!-- Modal End  -->
+
+<!-- Script TeacherAdding Start -->
+
+<script>
+
+         $(document).ready(function(){
+                     $("#teacheraddsubmitform").on("submit",function(e){
+
+                        e.preventDefault();
+
+                        var formData = new FormData(this);
+
+                        $.ajax({
+
+                           url : "action.php",
+                           type: "POST",
+                           data : formData,
+                           contentType: false,
+                           processData: false,
+                           success:function(data)
+                           {
+                            // alert(data);
+                             // $("#image_preview").html(data);
+                             // $("#upload_file").val('');
+                             toastr.success(" Adding Teacher  Success ");
 
 
-<?php 
+                           }
+                        })
 
-  $sql = "select * from school_users where uid = 1";
-  $result = $db->query($sql);
 
-?>
+                     })
+                  })
+
+
+</script>
+<!-- Script Teacher Adding Stop -->
+
+<?php
+
+    $sql = "select * from school_users where uid = 1";
+    $result = $db->query($sql);
+
+    ?>
 
 <table class="table">
   <thead>
@@ -233,22 +274,22 @@ margin-right: 7px;
     </tr>
   </thead>
   <tbody>
-<?php  while ($row = $result->fetch_assoc()) {?>
+<?php while ($row = $result->fetch_assoc()) {?>
     <tr>
       <th scope="row"><?php echo $number += 1 ?></th>
       <td><img src="/school/images/1310883125.jpg" height="50" width="50" class="rounded-circle"/></td>
-      <td><?php echo $row['name']?></td>
-      <td><?php echo $row['email']?></td>
-      <td><?php echo $row['fathername']?></td>
-      <td><?php echo $row['mothername']?></td>
-      <td><?php echo $row['phone']?></td>
-      <td><?php echo $row['location']?></td>
-      <td><?php echo $row['sellary']?></td>
-      <td><?php echo $row['entrydate']?></td>
+      <td><?php echo $row['name'] ?></td>
+      <td><?php echo $row['email'] ?></td>
+      <td><?php echo $row['fathername'] ?></td>
+      <td><?php echo $row['mothername'] ?></td>
+      <td><?php echo $row['phone'] ?></td>
+      <td><?php echo $row['location'] ?></td>
+      <td><?php echo $row['sellary'] ?></td>
+      <td><?php echo $row['entrydate'] ?></td>
       <td><button class="badge btn-danger" onclick="cancelorder(<?php echo $row["id"] ?>);" >Delete</button> </td>
       <td><button class="badge btn-primary" onclick="cancelorder(<?php echo $row["id"] ?>);" >Edit</button> </td>
     </tr>
-    <?php } ?>
+    <?php }?>
   </tbody>
 </table>
 

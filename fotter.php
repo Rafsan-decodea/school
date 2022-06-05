@@ -1,8 +1,8 @@
-	
-	
+
+
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-</button> 
-			 
+</button>
+
 			 <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -20,13 +20,13 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-</script>				
-					
-					
+</script>
+
+
 	<section class="section_2">
 		<div class="container">
 			<div class="root">
-				<div class="row ">	
+				<div class="row ">
 					<div class="col-lg-4 col-md-4 col-sm-4 root_01">
 						© All rights reserved © 2018 Educational					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4 social-link">
@@ -41,12 +41,12 @@ function topFunction() {
 
 					<div class="col-lg-4 col-md-4 col-sm-4 root_02">
 						Design & Developed BY <a href='http://www.themesbazar.com/' target='_blank' title='Mobile : 01818144463'>MD Rafsan</a>					</div>
-				</div>	
+				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
-				
-				<script type='text/javascript' src='<?php echo "/school/wp-includes/js/wp-embed.min7bcd.js" ;?>'></script>
+
+				<script type='text/javascript' src='<?php echo "/school/wp-includes/js/wp-embed.min7bcd.js"; ?>'></script>
 
 
 

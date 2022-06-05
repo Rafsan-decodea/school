@@ -255,7 +255,7 @@ body {
 					<a href="#"><img src="<?php echo "/school/pages/wp-content/themes/educationaltheme/images/banner.gif";?>" alt="Logo" width="100%"></a>
 				</div>
 			</div>
-
+			l
 			<!----------__________menu start___________------------>
 			
 			<div class="row">
