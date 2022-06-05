@@ -5,7 +5,6 @@
 
  $db = new DB();
 
- 
 
 ?>
 <!DOCTYPE html>
@@ -327,20 +326,18 @@ body {
 </ul>
 </li>
 <?php 
- echo $_SESSION["email"] ;
  if (isset($_SESSION["id"])) {
 ?>
 <li><a href="/school/login/dashboard/index.php">Dashboard</a></li>
-<?php } ?>
+<?php } else{ ?>
 <li><a href="/school/login">Login</a></li>
+<?php }?>
 </ul></div>						</div>
 					</nav>
 				</div>
 				</div>
 			</div>
 
-
-			
 			<!----------__________slider start___________------------>	
 			
 						

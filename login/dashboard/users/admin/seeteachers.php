@@ -136,6 +136,9 @@ margin-right: 7px;
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <div class="col-sm-6">
             <h1 class="m-0">Teachers Section</h1>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addteacher">
+           Add new Teacher 
+        </button>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -149,6 +152,61 @@ margin-right: 7px;
 
 <section class="content">
 
+
+<div class="modal fade" id="addteacher" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="email" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
+   </div>
+   <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="passwordid" placeholder="Password">
+   </div>
+   <div class="form-group">
+      <label for="exampleInputPassword1">Mobile</label>
+      <input type="text" name="mobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Frist Name </label>
+      <input type="text" class="form-control" name="fristname" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">LastName</label>
+      <input type="text" class="form-control" name="lastname" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" class="form-control" name="location" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
+   </div>
+
+   <button  onclick="addSeller();" data-bind="<?php $email = $var['email'];?>"  class="btn btn-primary">Submit</button>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <?php 
@@ -191,6 +249,9 @@ margin-right: 7px;
     <?php } ?>
   </tbody>
 </table>
+
+
+
 
 
 </section>
