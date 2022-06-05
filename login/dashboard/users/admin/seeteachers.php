@@ -157,7 +157,7 @@ margin-right: 7px;
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add New Teacher</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -227,6 +227,7 @@ margin-right: 7px;
       <th scope="col">Mother Name </th>
       <th scope="col">phone </th>
       <th scope="col">location</th>
+      <th scope="col">Sellary</th>
       <th scope="col">Entry Date </th>
       <th scope="col">Action </th>
     </tr>
@@ -243,6 +244,7 @@ margin-right: 7px;
       <td><?php echo $row['phone']?></td>
       <td><?php echo $row['location']?></td>
       <td><?php echo $row['sellary']?></td>
+      <td><?php echo $row['entrydate']?></td>
       <td><button class="badge btn-danger" onclick="cancelorder(<?php echo $row["id"] ?>);" >Delete</button> </td>
       <td><button class="badge btn-primary" onclick="cancelorder(<?php echo $row["id"] ?>);" >Edit</button> </td>
     </tr>
