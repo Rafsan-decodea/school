@@ -164,11 +164,13 @@ margin-right: 7px;
       <th scope="col">serial</th>
       <th scope="col">image</th>
       <th scope="col">Name</th>
+      <th scope="col">Email</th>
       <th scope="col">Father Name </th>
       <th scope="col">Mother Name </th>
       <th scope="col">phone </th>
       <th scope="col">location</th>
       <th scope="col">Entry Date </th>
+      <th scope="col">Action </th>
     </tr>
   </thead>
   <tbody>
@@ -177,11 +179,14 @@ margin-right: 7px;
       <th scope="row"><?php echo $number += 1 ?></th>
       <td><img src="/school/images/1310883125.jpg" height="50" width="50" class="rounded-circle"/></td>
       <td><?php echo $row['name']?></td>
+      <td><?php echo $row['email']?></td>
       <td><?php echo $row['fathername']?></td>
       <td><?php echo $row['mothername']?></td>
       <td><?php echo $row['phone']?></td>
       <td><?php echo $row['location']?></td>
       <td><?php echo $row['sellary']?></td>
+      <td><button class="badge btn-danger" onclick="cancelorder(<?php echo $row["id"] ?>);" >Delete</button> </td>
+      <td><button class="badge btn-primary" onclick="cancelorder(<?php echo $row["id"] ?>);" >Edit</button> </td>
     </tr>
     <?php } ?>
   </tbody>

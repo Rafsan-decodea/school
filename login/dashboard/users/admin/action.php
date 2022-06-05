@@ -97,7 +97,7 @@ class Post{
                     $sql1 = "select preprincipleimage	 from posts ";
                     $result = $db->query($sql1);
                     $image = mysqli_fetch_array($result);
-                    unlink( $_SERVER['DOCUMENT_ROOT'] . "/school/images/" .$image['preprincipleimage']);
+                    unlink( $_SERVER['DOCUMENT_ROOT'] . "/school/images/" .$image['preprincipleimage']); // That is for Delete Previous File
                     $sql = "update posts set preprincipleimage = '$new_name' ";
                     $db->query($sql);
                     echo "seccess";
