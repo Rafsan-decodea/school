@@ -185,8 +185,19 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="upload_file" type="file" accept="image/*" name="teacherimage" />
+      <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image  </small>
+      <img id="output" height="200" width="200" class="" src="#" alt="your image" />
+      <script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>
+<!-- Show Image Using Javascript  -->
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">LastName</label>
