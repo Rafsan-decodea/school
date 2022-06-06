@@ -152,7 +152,7 @@ margin-right: 7px;
 
 <section class="content">
 
-<!-- Modal For adding Student  -->
+<!-- Modal For adding Teacher -->
 <div class="modal fade" id="addteacher" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -212,7 +212,7 @@ margin-right: 7px;
    </div>
 
    <div class="form-group">
-      <label for="exampleInputEmail1">Location</label>
+      <label for="exampleInputEmail1">netLocation</label>
       <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
@@ -254,7 +254,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                           // alert(data);
+                          // alert(data);
                              toastr.success(" Adding Teacher  Success ");
 
 
@@ -296,7 +296,7 @@ margin-right: 7px;
 <?php while ($row = $result->fetch_assoc()) {?>
     <tr>
       <th scope="row"><?php echo $number += 1 ?></th>
-      <td><img src="<?php echo "/school/images/". $row['profileimage'] ?>" height="50" width="50" class="rounded-circle"/></td>
+      <td><img src="<?php echo "/school/images/" . $row['profileimage'] ?>" height="50" width="50" class="rounded-circle"/></td>
       <td><?php echo $row['name'] ?></td>
       <td><?php echo $row['email'] ?></td>
       <td><?php echo $row['fathername'] ?></td>
@@ -306,7 +306,7 @@ margin-right: 7px;
       <td><?php echo $row['sellary'] ?></td>
       <td><?php echo $row['entrydate'] ?></td>
       <td><button class="badge btn-danger" onclick="confromDelete(<?php echo $row["id"] ?>);" >Delete</button> </td>
-      <td><button class="badge btn-primary" onclick="cancelorder(<?php echo $row["id"] ?>);" >Edit</button> </td>
+      <td><button class="badge btn-primary" data-toggle="modal" data-target="#editteacher" onclick="updateTeacherProfile(<?php echo $row["id"] ?>);" >Edit</button> </td>
     </tr>
     <?php }?>
   </tbody>
@@ -340,11 +340,11 @@ margin-right: 7px;
 
       success: function (data,status)
       {
-  
+
 
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
-          
+
 
       }
 
@@ -357,6 +357,87 @@ margin-right: 7px;
 </script>
 
 
+<!-- Modal For Edit Teacher  -->
+<div class="modal fade" id="editteacher" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Teacher</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+  <form id="teacheraddsubmitform">
+   <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
+   </div>
+   <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="teacherpassword" class="form-control" id="passwordid" placeholder="Password">
+   </div>
+   <div class="form-group">
+      <label for="exampleInputPassword1">Mobile</label>
+      <input type="text" name="teachermobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Frist Name </label>
+      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Image </label>
+      <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
+      <small id="emailHelp" class="form-text text-muted">Enter Image </small>
+      <img id="output2" height="200" width="200" class="" src="#" alt="your image" />
+      <script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output2');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>
+<!-- Show Image Using Javascript  -->
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Father Name</label>
+      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Mother Name</label>
+      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">netLocation</label>
+      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Sellary</label>
+      <input type="text" class="form-control" name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
+      <small id="emailHelp" class="form-text text-muted">Sellary </small>
+   </div>
+
+   <input type="submit" class="btn btn-success" name="submit" value="submit" />
+  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal End  -->
 
 </section>
 
