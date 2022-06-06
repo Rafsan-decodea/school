@@ -233,9 +233,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                            // alert(data);
-                             // $("#image_preview").html(data);
-                             // $("#upload_file").val('');
+                      
                              toastr.success(" Adding Teacher  Success ");
 
 
