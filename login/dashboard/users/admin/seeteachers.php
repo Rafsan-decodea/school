@@ -183,7 +183,11 @@ margin-right: 7px;
       <input type="text" class="form-control" name="teacherfristname" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
-
+   <div class="form-group">
+      <label for="exampleInputEmail1">Image </label>
+      <input id="upload_file" type="file" accept="image/*" name="teacherimage" />
+      <small id="emailHelp" class="form-text text-muted">Enter Image  </small>
+   </div>
    <div class="form-group">
       <label for="exampleInputEmail1">LastName</label>
       <input type="text" class="form-control" name="teacherlastname" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
@@ -202,7 +206,7 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
 
-   <button class="btn btn-primary">Submit</button>
+   <input type="submit" class="btn btn-success" name="submit" value="submit" />
   </form>
       </div>
       <div class="modal-footer">
@@ -233,7 +237,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                      
+                            alert(data);
                              toastr.success(" Adding Teacher  Success ");
 
 

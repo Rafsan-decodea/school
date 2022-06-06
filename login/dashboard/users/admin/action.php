@@ -156,7 +156,29 @@ class Teacher
     {
         $db = new DB();
         extract($_POST);
-        echo $_POST["teacheremail"];
+        if(isset($_POST['teacheremail']) && isset($_POST['teacherpassword']))
+        {
+            $filename = $_FILES['upload_file']['name'];
+            $extension = pathinfo($filename, PATHINFO_EXTENSION);
+            $valid_extension = array("jpg", "jpeg", "png", "gif");
+
+            if (in_array($extension, $valid_extension)) {
+                $new_name = rand() . "." . $extension;
+                $path = $_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $new_name;
+                if (move_uploaded_file($_FILES['upload_file']['tmp_name'], $path)) {
+                    $sql1 = "select preprincipleimage  from posts ";
+                    $result = $db->query($sql1);
+                    $image = mysqli_fetch_array($result);
+                    unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['preprincipleimage']); // That is for Delete Previous File
+                    $sql = "update posts set preprincipleimage = '$new_name' ";
+                    $db->query($sql);
+                    echo "seccess";
+                }
+
+            } else {
+
+            }
+        }
 
     }
 
