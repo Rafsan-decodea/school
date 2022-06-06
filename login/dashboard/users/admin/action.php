@@ -191,9 +191,28 @@ class Teacher
 
     }
 
+    public function deleteProfile()
+    {
+        $db = new DB();
+        extract($_POST);
+       
+        if(isset($_POST['profileidSend']))
+        {
+            $sql1 = "select profileimage from school_users where id = $profileidSend";
+            $result1 = $db->query($sql1);
+            $deleteimage = mysqli_fetch_array($result1);
+            unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $deleteimage['profileimage']);
+
+            $sql = "DELETE FROM `school_users` WHERE `school_users`.`id` = $profileidSend";
+            $db->query($sql);
+
+        }
+    }
+
 }
 
 $teacher = new Teacher();
 $teacher->Addteacher();
+$teacher->deleteProfile();
 
 ?>

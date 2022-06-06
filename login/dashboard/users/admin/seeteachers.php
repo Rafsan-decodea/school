@@ -254,7 +254,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                            alert(data);
+                           // alert(data);
                              toastr.success(" Adding Teacher  Success ");
 
 
@@ -335,7 +335,7 @@ margin-right: 7px;
         url : "action.php",
         type : 'post',
         data : {
-              approveidSend:profileid,
+              profileidSend:profileid,
           },
 
       success: function (data,status)
@@ -343,7 +343,7 @@ margin-right: 7px;
   
 
           toastr.info("Please reload The Page For See Effect");
-          toastr.success("Approve Successfully ");
+          toastr.success("Delete Teacher  Successfully ");
           
 
       }
