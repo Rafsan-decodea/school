@@ -180,13 +180,13 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Frist Name </label>
-      <input type="text" class="form-control" name="teacherfristname" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
       <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
-      <small id="emailHelp" class="form-text text-muted">Enter Image  </small>
+      <small id="emailHelp" class="form-text text-muted">Enter Image </small>
       <img id="output" height="200" width="200" class="" src="#" alt="your image" />
       <script>
   var loadFile = function(event) {
@@ -200,8 +200,14 @@ margin-right: 7px;
 <!-- Show Image Using Javascript  -->
    </div>
    <div class="form-group">
-      <label for="exampleInputEmail1">LastName</label>
-      <input type="text" class="form-control" name="teacherlastname" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <label for="exampleInputEmail1">Father Name</label>
+      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Mother Name</label>
+      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
@@ -214,7 +220,7 @@ margin-right: 7px;
    <div class="form-group">
       <label for="exampleInputEmail1">Sellary</label>
       <input type="text" class="form-control" name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
-      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
+      <small id="emailHelp" class="form-text text-muted">Sellary </small>
    </div>
 
    <input type="submit" class="btn btn-success" name="submit" value="submit" />
@@ -290,7 +296,7 @@ margin-right: 7px;
 <?php while ($row = $result->fetch_assoc()) {?>
     <tr>
       <th scope="row"><?php echo $number += 1 ?></th>
-      <td><img src="/school/images/1310883125.jpg" height="50" width="50" class="rounded-circle"/></td>
+      <td><img src="<?php echo "/school/images/". $row['profileimage'] ?>" height="50" width="50" class="rounded-circle"/></td>
       <td><?php echo $row['name'] ?></td>
       <td><?php echo $row['email'] ?></td>
       <td><?php echo $row['fathername'] ?></td>
