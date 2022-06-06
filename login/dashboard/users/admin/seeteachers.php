@@ -372,25 +372,25 @@ margin-right: 7px;
   <form id="teacheraddsubmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <input type="email" class="form-control" name="updateteacheremail" id="updateteacheremail" aria-describedby="emailHelp" Name placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="teacherpassword" class="form-control" id="passwordid" placeholder="Password">
+      <input type="password" name="updateteacherpassword" class="form-control" id="updateteacherpassword" placeholder="Password">
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Mobile</label>
-      <input type="text" name="teachermobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
+      <input type="text" name="updateteachermobile" class="form-control" id="updateteachermobile" placeholder="mobilenumber">
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Frist Name </label>
-      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="text" class="form-control" name="updateteachername" id="updateteachername" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
+      <input id="updateteacherimage" type="file" accept="image/*" onchange="loadFile(event)" name="updateteacherimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
       <img id="output2" height="200" width="200" class="" src="#" alt="your image" />
       <script>
@@ -406,25 +406,25 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="updateteacherfathername" id="updateteacherfathername" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="updateteachermothername" id="updateteachermothername" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
-      <label for="exampleInputEmail1">netLocation</label>
-      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" class="form-control" name="updateteacherlocation" id="updateteacherlocation" aria-describedby="emailHelp" Name placeholder="location">
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Sellary</label>
-      <input type="text" class="form-control" name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
+      <input type="text" class="form-control" name="updateteachersellary" id="updateteachersellary" aria-describedby="emailHelp" Name placeholder="Sallery">
       <small id="emailHelp" class="form-text text-muted">Sellary </small>
    </div>
 
