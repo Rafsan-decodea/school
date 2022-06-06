@@ -305,14 +305,56 @@ margin-right: 7px;
       <td><?php echo $row['location'] ?></td>
       <td><?php echo $row['sellary'] ?></td>
       <td><?php echo $row['entrydate'] ?></td>
-      <td><button class="badge btn-danger" onclick="cancelorder(<?php echo $row["id"] ?>);" >Delete</button> </td>
+      <td><button class="badge btn-danger" onclick="confromDelete(<?php echo $row["id"] ?>);" >Delete</button> </td>
       <td><button class="badge btn-primary" onclick="cancelorder(<?php echo $row["id"] ?>);" >Edit</button> </td>
     </tr>
     <?php }?>
   </tbody>
 </table>
 
+<script>
+  function confromDelete(profileid)
+ {
 
+  var result = confirm("Are You Want to Delete this "+profileid+" ?");
+  if(result)
+  {
+    Delete(profileid)
+  }
+  else
+  {
+    toastr.warning("Not Delete Teacher ");
+  }
+
+ }
+
+ function Delete(profileid)
+  {
+
+    $.ajax({
+        url : "action.php",
+        type : 'post',
+        data : {
+              approveidSend:profileid,
+          },
+
+      success: function (data,status)
+      {
+  
+
+          toastr.info("Please reload The Page For See Effect");
+          toastr.success("Approve Successfully ");
+          
+
+      }
+
+
+   });
+
+  }
+
+
+</script>
 
 
 
