@@ -233,12 +233,12 @@ if ($_SESSION["uid"] == 0) {
               <i class="nav-icon fab fa-500px"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+            
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/school/login/dashboard/users/admin/makepost.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
+            <a href="/school/login/dashboard/users/admin/makepost.php" class="nav-link <?php echo $current_page == 'makepost.php' ? 'active' : null ?> ">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Make Post
@@ -247,7 +247,7 @@ if ($_SESSION["uid"] == 0) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeprofile.php' ? 'active' : null ?> ">
+            <a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> ">
               <i class="nav-icon fas fa-th"></i>
               <p>
                Teachers Tab
@@ -497,7 +497,6 @@ if ($_SESSION["uid"] == 0) {
               <i class="nav-icon fab fa-500px"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
           </li>

@@ -191,7 +191,26 @@ class Teacher
 
     }
 
-    public function deleteProfile()
+  public function fetchTeacherData()
+  {
+    $db = new DB();
+    extract($_POST);
+
+    
+     
+  }
+
+
+   public function updateTeacher()
+   {
+       $db = new DB();
+       extract($_POST);
+
+
+   }
+
+
+    public function deleteTeacher()
     {
         $db = new DB();
         extract($_POST);
@@ -213,6 +232,8 @@ class Teacher
 
 $teacher = new Teacher();
 $teacher->Addteacher();
-$teacher->deleteProfile();
+$teacher->deleteTeacher();
+$teacher->updateTeacher();
+$teacher->fetchTeacherData();
 
 ?>

@@ -369,7 +369,7 @@ margin-right: 7px;
       </div>
       <div class="modal-body">
 
-  <form id="teacheraddsubmitform">
+  <form id="teacherupdatesubmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" name="updateteacheremail" id="updateteacheremail" aria-describedby="emailHelp" Name placeholder="Enter email">
@@ -390,11 +390,11 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="updateteacherimage" type="file" accept="image/*" onchange="loadFile(event)" name="updateteacherimage" />
+      <input id="updateteacherimage" type="file" accept="image/*" onchange="loadFilee(event)" name="updateteacherimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
       <img id="output2" height="200" width="200" class="" src="#" alt="your image" />
       <script>
-  var loadFile = function(event) {
+  var loadFilee = function(event) {
     var output = document.getElementById('output2');
     output.src = URL.createObjectURL(event.target.files[0]);
     output.onload = function() {
@@ -438,6 +438,40 @@ margin-right: 7px;
   </div>
 </div>
 <!-- Modal End  -->
+
+<!-- Teacher Update Model -->
+<script>
+
+         $(document).ready(function(){
+                     $("#teacherupdatesubmitform").on("submit",function(e){
+
+                        e.preventDefault();
+
+                        var formData = new FormData(this);
+
+                        $.ajax({
+
+                           url : "action.php",
+                           type: "POST",
+                           data : formData,
+                           contentType: false,
+                           processData: false,
+                           success:function(data)
+                           {
+                          // alert(data);
+                             toastr.success(" Adding Update  Success ");
+
+
+                           }
+                        })
+
+
+                     })
+                  })
+
+
+</script>
+<!-- Teacher Update End  -->
 
 </section>
 
