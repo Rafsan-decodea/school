@@ -251,20 +251,24 @@ if ($_SESSION["uid"] == 0) {
             </a>
           </li>
           <!-- This is A Section For Teacher  -->
-          <li data-toggle="collapse" data-target="#products" class="nav-item collapsed ">
-          <!-- <i class="fa fa-globe fa-lg"></i> -->
-              <div class="btn-group" dropdown>
-            <button type="button" class="btn btn-secondary">Teacher Section</button>
-            <button type="button" class="btn btn-secondary dropdown-toggle" dropdown-toggle>
-                <span class="caret"></span>
-                <span class="sr-only">Split button!</span>
-            </button>
-           </div>
-                <ul class="sub-menu collapse" id="products">
-                    <li><a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> ">Add Teacher </a></li>
-                    <li><a href="" class="nav-link ">Teacher</a></li>
-                  </ul>     
-           </li>
+
+           <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+               Teacher Section
+                <i class="fas fa-angle-left right"></i>
+                <!-- <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> " class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Adding Teacher </p>
+                </a>
+              </li>
+              
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
