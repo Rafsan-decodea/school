@@ -306,7 +306,7 @@ margin-right: 7px;
       <td><?php echo $row['sellary'] ?></td>
       <td><?php echo $row['entrydate'] ?></td>
       <td><button class="badge btn-danger" onclick="confromDelete(<?php echo $row["id"] ?>);" >Delete</button> </td>
-      <td><button class="badge btn-primary" data-toggle="modal" data-target="#editteacher" onclick="updateTeacherProfile(<?php echo $row["id"] ?>);" >Edit</button> </td>
+      <td><button class="badge btn-primary" data-toggle="modal" data-target="#editteacher" onclick="FetchData(<?php echo $row["id"] ?>);" >Edit</button> </td>
     </tr>
     <?php }?>
   </tbody>
@@ -428,7 +428,7 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Sellary </small>
    </div>
 
-   <input type="submit" class="btn btn-success" name="submit" onclick="FetchData()" value="submit" />
+   <input type="submit" class="btn btn-success" name="submit"  value="submit" />
   </form>
       </div>
       <div class="modal-footer">
@@ -442,9 +442,32 @@ margin-right: 7px;
 <!-- Fetch Teacher Data Script  -->
 <script>
      
-     function FetchData()
+     function FetchData(profileid)
      {
-       alert("Working");
+       
+      $.ajax({
+
+            url : "action.php",
+            type: "POST",
+            data : {
+              sendProfileid: profileid,
+            },
+            success:function(data)
+            {
+            
+              var fetchuserid  = JSON.parse(data);
+
+              $("#updateteacheremail").val(fetchuserid.email);
+              $("#updateteacherpassword").val(fetchuserid.password);
+              $("#updateteachermobile").val(fetchuserid.phone);
+              $("#updateteachername").val(fetchuserid.name);
+              $("#updatelastnameid").val(fetchuserid.profileimage);
+              $("#updateteacherfathername").val(fetchuserid.fathername);
+              $("#updateteachermothername").val(fetchuserid.mothername);
+              $("#updateteacherlocation").val(fetchuserid.location);
+              $("#updateteachersellary").val(fetchuserid.sellary);
+            }
+        });
      }
 
 </script>
