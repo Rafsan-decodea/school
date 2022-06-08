@@ -439,7 +439,7 @@ margin-right: 7px;
 </div>
 <!-- Modal End  -->
 
-<!-- Teacher Update Model -->
+<!-- Teacher Update Script  -->
 <script>
 
          $(document).ready(function(){

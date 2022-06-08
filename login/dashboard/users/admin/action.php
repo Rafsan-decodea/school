@@ -196,7 +196,7 @@ class Teacher
     $db = new DB();
     extract($_POST);
 
-    
+   
      
   }
 
