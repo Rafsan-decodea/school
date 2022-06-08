@@ -250,17 +250,21 @@ if ($_SESSION["uid"] == 0) {
               </p>
             </a>
           </li>
+          <!-- This is A Section For Teacher  -->
           <li data-toggle="collapse" data-target="#products" class="nav-item collapsed ">
-              <i class="nav-icon fas fa-br"></i>
-              <a href="#">Teacher Section <span class="arrow"></span></a>
+          <!-- <i class="fa fa-globe fa-lg"></i> -->
+              <div class="btn-group" dropdown>
+            <button type="button" class="btn btn-secondary">Teacher Section</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle" dropdown-toggle>
+                <span class="caret"></span>
+                <span class="sr-only">Split button!</span>
+            </button>
+           </div>
                 <ul class="sub-menu collapse" id="products">
                     <li><a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> ">Add Teacher </a></li>
-                    <li><a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link ">Teacher </a></li>
+                    <li><a href="" class="nav-link ">Teacher</a></li>
                   </ul>     
-
-          </li>
-
-
+           </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
