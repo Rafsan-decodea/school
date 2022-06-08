@@ -14,7 +14,7 @@ if ($_SESSION["uid"] == 0) {
     ?>
 
 
-<?php include 'header.php'?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/school/login/dashboard/header.php'?>
 
 <section class="content">
       <div class="container-fluid">
@@ -598,6 +598,9 @@ if ($_SESSION["uid"] == 0) {
       </div><!-- /.container-fluid -->
     </section>
 
+  <?php include $_SERVER['DOCUMENT_ROOT'].'/school/login/dashboard/fotter.php'?>
+
+
 <?php
 }
 
@@ -611,7 +614,7 @@ if ($_SESSION["uid"] == 1) {
 ?>
 
 
-<?php include 'header.php'?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/school/login/dashboard/header.php'?>
 
 <section class="content">
   <div class="container-fluid">
@@ -1194,6 +1197,8 @@ if ($_SESSION["uid"] == 1) {
     <!-- /.row (main row) -->
   </div><!-- /.container-fluid -->
 </section>
+
+<?php include $_SERVER['DOCUMENT_ROOT'].'/school/login/dashboard/fotter.php'?>
 
 <?php
 }
