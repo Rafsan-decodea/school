@@ -597,7 +597,6 @@ if ($_SESSION["uid"] == 0) {
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
-
   <?php include $_SERVER['DOCUMENT_ROOT'].'/school/login/dashboard/fotter.php'?>
 
 
@@ -605,6 +604,7 @@ if ($_SESSION["uid"] == 0) {
 }
 
 ?>
+
 
 
 <?php 

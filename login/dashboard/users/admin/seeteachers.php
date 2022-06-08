@@ -428,7 +428,7 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Sellary </small>
    </div>
 
-   <input type="submit" class="btn btn-success" name="submit" value="submit" />
+   <input type="submit" class="btn btn-success" name="submit" onclick="FetchData()" value="submit" />
   </form>
       </div>
       <div class="modal-footer">
@@ -438,6 +438,16 @@ margin-right: 7px;
   </div>
 </div>
 <!-- Modal End  -->
+
+<!-- Fetch Teacher Data Script  -->
+<script>
+     
+     function FetchData()
+     {
+       alert("Working");
+     }
+
+</script>
 
 <!-- Teacher Update Script  -->
 <script>
@@ -459,7 +469,7 @@ margin-right: 7px;
                            success:function(data)
                            {
                           // alert(data);
-                             toastr.success(" Adding Update  Success ");
+                             toastr.success(" Noting");
 
 
                            }
