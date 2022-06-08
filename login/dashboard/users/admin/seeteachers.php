@@ -465,7 +465,8 @@ margin-right: 7px;
               $("#updateteacherfathername").val(fetchuserid.fathername);
               $("#updateteachermothername").val(fetchuserid.mothername);
               $("#updateteacherlocation").val(fetchuserid.location);
-              $("#updateteachersellary").val(fetchuserid.sellary);
+              $("#updateteachersellary").val(fetchuserid.sellary); 
+              
             }
         });
      }
