@@ -47,6 +47,10 @@ if ($_SESSION["uid"] == 0) {
   <link rel="stylesheet" href="/school/login/dashboard/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/school/login/dashboard/plugins/summernote/summernote-bs4.min.css">
+  
+ 
+  <link rel="stylesheet" href="/school/allcssjs/all.css">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -246,15 +250,14 @@ if ($_SESSION["uid"] == 0) {
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> ">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-               Teachers Tab
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-              
+          <li data-toggle="collapse" data-target="#products" class="nav-item collapsed ">
+              <i class="nav-icon fas fa-br"></i>
+              <a href="#">Teacher Section <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="products">
+                    <li><a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> ">Add Teacher </a></li>
+                    <li><a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link ">Teacher </a></li>
+                  </ul>     
+
           </li>
 
 
