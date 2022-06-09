@@ -217,7 +217,40 @@ class Teacher
        extract($_POST);
        if(isset($_POST['updateteacheremail']) && isset($_POST['updateteacherpassword']))
        {
-           echo "ok";
+             if(isset($_POST['updateteacherimage'])){
+             
+                $filename = $_FILES['teacherimage']['name'];
+               $extension = pathinfo($filename, PATHINFO_EXTENSION);
+               $valid_extension = array("jpg", "jpeg", "png", "gif");
+       
+               if (in_array($extension, $valid_extension)) {
+                   $profileimagename = rand() . "." . $extension;
+                   $path = $_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $profileimagename;
+                   if (move_uploaded_file($_FILES['teacherimage']['tmp_name'], $path)) {
+                       // $sql1 = "select profileimage  from school_users";
+                       // $result = $db->query($sql1);
+                       // $image = mysqli_fetch_array($result);
+                       // if($image)
+                       // {
+                       //     unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['profileimage']); // That is for Delete Previous File
+                       // }
+                       $name = $_POST['teachername'];
+                       $mothername = $_POST['teachermothername'];
+                       $fathername = $_POST['teacherfathername'];
+                       $mobile = $_POST['teachermobile'];
+                       $location = $_POST['teacherlocation'];
+                       $sellary = $_POST['teachersellary'];
+                       $sql = "insert into school_users(uid,email,password,name,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name','$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
+                       $db->query($sql);
+                       echo "seccess";
+                   }
+       
+               } else {
+       
+               }
+            }
+
+            $sql = "insert into school_users(uid,email,password,name,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name','$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
        }
 
 
