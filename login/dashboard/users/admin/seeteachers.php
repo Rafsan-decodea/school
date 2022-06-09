@@ -493,8 +493,8 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                          // alert(data);
-                             toastr.success(" Noting");
+                             alert(data);
+                             toastr.success("Update Data Success ");
 
 
                            }

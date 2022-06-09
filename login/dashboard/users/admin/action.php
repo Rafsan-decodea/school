@@ -215,6 +215,10 @@ class Teacher
    {
        $db = new DB();
        extract($_POST);
+       if(isset($_POST['updateteacheremail']) && isset($_POST['updateteacherpassword']))
+       {
+           echo "ok";
+       }
 
 
    }
