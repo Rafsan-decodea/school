@@ -370,6 +370,7 @@ margin-right: 7px;
       <div class="modal-body">
 
   <form id="teacherupdatesubmitform">
+    <input  type="hidden" name="updateteacherid" id="updateteacherid"/>
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" name="updateteacheremail" id="updateteacheremail" aria-describedby="emailHelp" Name placeholder="Enter email">
@@ -441,10 +442,10 @@ margin-right: 7px;
 
 <!-- Fetch Teacher Data Script  -->
 <script>
-     
+
      function FetchData(profileid)
      {
-       
+
       $.ajax({
 
             url : "action.php",
@@ -454,9 +455,9 @@ margin-right: 7px;
             },
             success:function(data)
             {
-            
-              var fetchuserid  = JSON.parse(data);
 
+              var fetchuserid  = JSON.parse(data);
+              $("#updateteacherid").val(fetchuserid.id);
               $("#updateteacheremail").val(fetchuserid.email);
               $("#updateteacherpassword").val(fetchuserid.password);
               $("#updateteachermobile").val(fetchuserid.phone);
@@ -466,8 +467,8 @@ margin-right: 7px;
               $("#updateteacherfathername").val(fetchuserid.fathername);
               $("#updateteachermothername").val(fetchuserid.mothername);
               $("#updateteacherlocation").val(fetchuserid.location);
-              $("#updateteachersellary").val(fetchuserid.sellary); 
-              
+              $("#updateteachersellary").val(fetchuserid.sellary);
+
             }
         });
      }
