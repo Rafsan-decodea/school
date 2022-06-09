@@ -462,6 +462,7 @@ margin-right: 7px;
               $("#updateteachermobile").val(fetchuserid.phone);
               $("#updateteachername").val(fetchuserid.name);
               $("#updatelastnameid").val(fetchuserid.profileimage);
+              $("#output2").attr("src","/school/images/"+fetchuserid.profileimage);
               $("#updateteacherfathername").val(fetchuserid.fathername);
               $("#updateteachermothername").val(fetchuserid.mothername);
               $("#updateteacherlocation").val(fetchuserid.location);
