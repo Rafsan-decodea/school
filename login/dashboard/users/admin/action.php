@@ -214,8 +214,8 @@ class Teacher
         extract($_POST);
         if (isset($_POST['updateteacheremail']) && isset($_POST['updateteacherpassword'])) {
 
-            echo $_POST['updateteacherimage'];
-            if (isset($_POST['updateteacherimage']) && isset($_POST['updateteacherid'])) {
+
+            if (isset($_FILES['updateteacherimage']) && isset($_POST['updateteacherid'])) {
 
                 $filename = $_FILES['updateteacherimage']['name'];
                 $extension = pathinfo($filename, PATHINFO_EXTENSION);
@@ -231,8 +231,8 @@ class Teacher
                         if ($image) {
                             unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['profileimage']); // That is for Delete Previous File
                         }
-                        $sql = "update  school_users set profileimage = '$profileimagename' ";
-                        $db->query($sql);
+                        $sql = "update  school_users set profileimage = '$profileimagename' where id = $updateteacherid ";
+                        $db->update($sql);
                         echo "seccess";
                     }
 
@@ -240,6 +240,56 @@ class Teacher
 
                 }
             }
+
+            if(isset($_POST['updateteacheremail'])&&isset($_POST['updateteacherid']))
+            {
+              $sql = "update school_users set email = '$updateteacheremail' where id = $updateteacherid ";
+              $db->update($sql);
+            }
+
+            if(isset($_POST['updateteacherpassword'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set password = '$updateteacherpassword' where id = $updateteacherid ";
+                $db->update($sql);
+
+            }
+
+            if(isset($_POST['updateteachermobile'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set phone = '$updateteachermobile' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+
+            if(isset($_POST['updateteachername'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set name = '$updateteachername' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+
+            if(isset($_POST['updateteacherfathername'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set fathername = '$updateteacherfathername' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+
+            if(isset($_POST['updateteachermothername'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set mothername = '$updateteachermothername' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+
+            if(isset($_POST['updateteacherlocation'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set location = '$updateteacherlocation' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+
+            if(isset($_POST['updateteachersellary'])&&isset($_POST['updateteacherid']))
+            {
+                $sql = "update school_users set sellary = '$updateteachersellary' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+
 
             // $sql = "insert into school_users(uid,email,password,name,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name','$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
         }

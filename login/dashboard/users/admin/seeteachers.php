@@ -494,7 +494,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                             alert(data);
+                             //alert(data);
                              toastr.success("Update Data Success ");
 
 
