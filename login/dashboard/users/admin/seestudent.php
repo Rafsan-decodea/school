@@ -164,7 +164,7 @@ margin-right: 7px;
       </div>
       <div class="modal-body">
 
-  <form id="teacheraddsubmitform">
+  <form id="studentaddsbmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
@@ -239,7 +239,7 @@ margin-right: 7px;
 <script>
 
          $(document).ready(function(){
-                     $("#teacheraddsubmitform").on("submit",function(e){
+                     $("#studentaddsubmitform").on("submit",function(e){
 
                         e.preventDefault();
 
@@ -255,7 +255,7 @@ margin-right: 7px;
                            success:function(data)
                            {
                           // alert(data);
-                             toastr.success(" Adding Teacher  Success ");
+                             toastr.success(" Adding Student Success ");
 
 
                            }
