@@ -268,8 +268,27 @@ if ($_SESSION["uid"] == 0) {
                   <p>Adding Teacher </p>
                 </a>
               </li>
-              
-        </ul>
+             </ul>
+        </li>
+   <!-- This is A Section For Student   -->
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+               Student  Section
+                <i class="fas fa-angle-left right"></i>
+                <!-- <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/school/login/dashboard/users/admin/seestudent.php" class="nav-link <?php echo $current_page == 'seestudent.php' ? 'active' : null ?> " class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Adding Student </p>
+                </a>
+              </li>
+             </ul>
+        </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
