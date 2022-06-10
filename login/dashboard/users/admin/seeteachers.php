@@ -254,7 +254,12 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                          // alert(data);
+                          //   alert(data);
+                          //  if (data == 0)
+                          //  {
+
+                          //    toastr.error("Email Already Exit");
+                          //  }
                              toastr.success(" Adding Teacher  Success ");
 
 

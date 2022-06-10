@@ -156,6 +156,15 @@ class Teacher
     {
         $db = new DB();
         extract($_POST);
+        $sql = "select email from school_users where uid = 1";
+        $result = $db->query($sql);
+        $data = mysqli_fetch_all($result);
+        // echo json_encode($data['email']);
+        // exit();
+        // if ($_POST['email'] == $data['email']) {
+        //     echo json_encode(0);
+        //     exit();
+        // }
         if (isset($_POST['teacheremail']) && isset($_POST['teacherpassword'])) {
             $filename = $_FILES['teacherimage']['name'];
             $extension = pathinfo($filename, PATHINFO_EXTENSION);
@@ -214,7 +223,6 @@ class Teacher
         extract($_POST);
         if (isset($_POST['updateteacheremail']) && isset($_POST['updateteacherpassword'])) {
 
-
             if (isset($_FILES['updateteacherimage']) && isset($_POST['updateteacherid'])) {
 
                 $filename = $_FILES['updateteacherimage']['name'];
@@ -241,55 +249,46 @@ class Teacher
                 }
             }
 
-            if(isset($_POST['updateteacheremail'])&&isset($_POST['updateteacherid']))
-            {
-              $sql = "update school_users set email = '$updateteacheremail' where id = $updateteacherid ";
-              $db->update($sql);
+            if (isset($_POST['updateteacheremail']) && isset($_POST['updateteacherid'])) {
+                $sql = "update school_users set email = '$updateteacheremail' where id = $updateteacherid ";
+                $db->update($sql);
             }
 
-            if(isset($_POST['updateteacherpassword'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteacherpassword']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set password = '$updateteacherpassword' where id = $updateteacherid ";
                 $db->update($sql);
 
             }
 
-            if(isset($_POST['updateteachermobile'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteachermobile']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set phone = '$updateteachermobile' where id = $updateteacherid ";
                 $db->update($sql);
             }
 
-            if(isset($_POST['updateteachername'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteachername']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set name = '$updateteachername' where id = $updateteacherid ";
                 $db->update($sql);
             }
 
-            if(isset($_POST['updateteacherfathername'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteacherfathername']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set fathername = '$updateteacherfathername' where id = $updateteacherid ";
                 $db->update($sql);
             }
 
-            if(isset($_POST['updateteachermothername'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteachermothername']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set mothername = '$updateteachermothername' where id = $updateteacherid ";
                 $db->update($sql);
             }
 
-            if(isset($_POST['updateteacherlocation'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteacherlocation']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set location = '$updateteacherlocation' where id = $updateteacherid ";
                 $db->update($sql);
             }
 
-            if(isset($_POST['updateteachersellary'])&&isset($_POST['updateteacherid']))
-            {
+            if (isset($_POST['updateteachersellary']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set sellary = '$updateteachersellary' where id = $updateteacherid ";
                 $db->update($sql);
             }
-
 
             // $sql = "insert into school_users(uid,email,password,name,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name','$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
         }
