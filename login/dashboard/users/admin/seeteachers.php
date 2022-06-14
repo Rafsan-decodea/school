@@ -173,13 +173,13 @@ margin-right: 7px;
    <div class="form-group">
    <label for="exampleInputEmail1">Select Gender </label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="teachergender" id="flexRadioDefault1" checked>
+        <input class="form-check-input" type="radio" name="teachergender" value="1" id="flexRadioDefault1" checked>
         <label class="form-check-label" for="flexRadioDefault1">
           Male
         </label>
       </div>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="teachergender" id="flexRadioDefault2" >
+          <input class="form-check-input" type="radio" name="teachergender" value="2" id="flexRadioDefault2" >
           <label class="form-check-label" for="flexRadioDefault2">
             Female
           </label>
@@ -269,7 +269,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                          //   alert(data);
+                             //alert(data);
                           //  if (data == 0)
                           //  {
 
@@ -412,6 +412,21 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
+   <label for="exampleInputEmail1">Select Gender </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="updateteachergender" value="1" id="malechecked" checked>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="updateteachergender" value="2" id="femalechecked" >
+          <label class="form-check-label" for="flexRadioDefault2">
+            Female
+          </label>
+      </div>
+   </div>
+   <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
       <input id="updateteacherimage" type="file" accept="image/*" onchange="loadFilee(event)" name="updateteacherimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
@@ -484,6 +499,7 @@ margin-right: 7px;
               $("#updateteacherpassword").val(fetchuserid.password);
               $("#updateteachermobile").val(fetchuserid.phone);
               $("#updateteachername").val(fetchuserid.name);
+              if(fetchuserid.gender ==1 ){$("#malechecked").prop("checked", true);}else{$("#femalechecked").prop("checked", true);}
               $("#updatelastnameid").val(fetchuserid.profileimage);
               $("#output2").attr("src","/school/images/"+fetchuserid.profileimage);
               $("#updateteacherfathername").val(fetchuserid.fathername);

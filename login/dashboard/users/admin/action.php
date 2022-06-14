@@ -182,7 +182,7 @@ class Teacher
                     //     unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['profileimage']); // That is for Delete Previous File
                     // }
                     $name = $_POST['teachername'];
-                    $gender = $_POST['gender'];
+                    $gender = $_POST['teachergender'];
                     $mothername = $_POST['teachermothername'];
                     $fathername = $_POST['teacherfathername'];
                     $mobile = $_POST['teachermobile'];
@@ -268,6 +268,10 @@ class Teacher
 
             if (isset($_POST['updateteachername']) && isset($_POST['updateteacherid'])) {
                 $sql = "update school_users set name = '$updateteachername' where id = $updateteacherid ";
+                $db->update($sql);
+            }
+            if (isset($_POST['updateteachergender']) && isset($_POST['updateteacherid'])) {
+                $sql = "update school_users set gender = '$updateteachergender' where id = $updateteacherid ";
                 $db->update($sql);
             }
 
