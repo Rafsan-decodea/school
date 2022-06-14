@@ -171,6 +171,21 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
    <div class="form-group">
+   <label for="exampleInputEmail1">Select Gender </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="teachergender" id="flexRadioDefault1" checked>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="teachergender" id="flexRadioDefault2" >
+          <label class="form-check-label" for="flexRadioDefault2">
+            Female
+          </label>
+      </div>
+   </div>
+   <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" name="teacherpassword" class="form-control" id="passwordid" placeholder="Password">
    </div>
@@ -287,6 +302,7 @@ margin-right: 7px;
       <th scope="col">serial</th>
       <th scope="col">image</th>
       <th scope="col">Name</th>
+      <th scope="col">Gender</th>
       <th scope="col">Email</th>
       <th scope="col">Father Name </th>
       <th scope="col">Mother Name </th>
@@ -303,6 +319,7 @@ margin-right: 7px;
       <th scope="row"><?php echo $number += 1 ?></th>
       <td><img src="<?php echo "/school/images/" . $row['profileimage'] ?>" height="50" width="50" class="rounded-circle"/></td>
       <td><?php echo $row['name'] ?></td>
+      <td><?php if ($row['gender'] == 1) {echo "Male";} else {echo "Female";}?></td>
       <td><?php echo $row['email'] ?></td>
       <td><?php echo $row['fathername'] ?></td>
       <td><?php echo $row['mothername'] ?></td>

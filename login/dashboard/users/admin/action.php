@@ -182,12 +182,13 @@ class Teacher
                     //     unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['profileimage']); // That is for Delete Previous File
                     // }
                     $name = $_POST['teachername'];
+                    $gender = $_POST['gender'];
                     $mothername = $_POST['teachermothername'];
                     $fathername = $_POST['teacherfathername'];
                     $mobile = $_POST['teachermobile'];
                     $location = $_POST['teacherlocation'];
                     $sellary = $_POST['teachersellary'];
-                    $sql = "insert into school_users(uid,email,password,name,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name','$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
+                    $sql = "insert into school_users(uid,email,password,name,gender,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name',$gender,'$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
                     $db->query($sql);
                     echo "seccess";
                 }
