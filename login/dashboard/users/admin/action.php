@@ -156,49 +156,63 @@ class Teacher
     {
         $db = new DB();
         extract($_POST);
-        $sql = "select email from school_users where uid = 1";
-        $result = $db->query($sql);
-        $data = mysqli_fetch_all($result);
-        // echo json_encode($data['email']);
-        // exit();
-        // if ($_POST['email'] == $data['email']) {
-        //     echo json_encode(0);
-        //     exit();
-        // }
-        if (isset($_POST['teacheremail']) && isset($_POST['teacherpassword'])) {
-            $filename = $_FILES['teacherimage']['name'];
-            $extension = pathinfo($filename, PATHINFO_EXTENSION);
-            $valid_extension = array("jpg", "jpeg", "png", "gif");
+        if(isset($_POST['teacheremail']))
+        {
+            $checksql = "SELECT `email` FROM `school_users` WHERE `email` = '".$_POST['teacheremail']. "'";
+            $seechek = $db->query($checksql);
+            $response = array();
+             while ($row = mysqli_fetch_assoc($seechek)) {
+                     $response = $row;
+              }
+              echo json_encode($response);    
+     
+              if(empty($response))
+              {
+                
+          
+                    if (isset($_POST['teacheremail']) && isset($_POST['teacherpassword'])) {
+                       $filename = $_FILES['teacherimage']['name'];
+                       $extension = pathinfo($filename, PATHINFO_EXTENSION);
+                       $valid_extension = array("jpg", "jpeg", "png", "gif");
+           
+                       if (in_array($extension, $valid_extension)) {
+                           $profileimagename = rand() . "." . $extension;
+                           $path = $_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $profileimagename;
+                           if (move_uploaded_file($_FILES['teacherimage']['tmp_name'], $path)) {
+                               // $sql1 = "select profileimage  from school_users";
+                               // $result = $db->query($sql1);
+                               // $image = mysqli_fetch_array($result);
+                               // if($image)
+                               // {
+                               //     unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['profileimage']); // That is for Delete Previous File
+                               // }
+                               $name = $_POST['teachername'];
+                               $gender = $_POST['teachergender'];
+                               $mothername = $_POST['teachermothername'];
+                               $fathername = $_POST['teacherfathername'];
+                               $mobile = $_POST['teachermobile'];
+                               $location = $_POST['teacherlocation'];
+                               $sellary = $_POST['teachersellary'];
+                               $sql = "insert into school_users(uid,email,password,name,gender,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name',$gender,'$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
+                               $db->query($sql);
+                               echo "seccess";
+                           }
+     
+                 } else {
+                      // DO Nothing
+     
+                    }
+             }
+     
+            
+             else{
+                 // Cannot Insert Data into Database 
+              }
 
-            if (in_array($extension, $valid_extension)) {
-                $profileimagename = rand() . "." . $extension;
-                $path = $_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $profileimagename;
-                if (move_uploaded_file($_FILES['teacherimage']['tmp_name'], $path)) {
-                    // $sql1 = "select profileimage  from school_users";
-                    // $result = $db->query($sql1);
-                    // $image = mysqli_fetch_array($result);
-                    // if($image)
-                    // {
-                    //     unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $image['profileimage']); // That is for Delete Previous File
-                    // }
-                    $name = $_POST['teachername'];
-                    $gender = $_POST['teachergender'];
-                    $mothername = $_POST['teachermothername'];
-                    $fathername = $_POST['teacherfathername'];
-                    $mobile = $_POST['teachermobile'];
-                    $location = $_POST['teacherlocation'];
-                    $sellary = $_POST['teachersellary'];
-                    $sql = "insert into school_users(uid,email,password,name,gender,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name',$gender,'$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
-                    $db->query($sql);
-                    echo "seccess";
-                }
-
-            } else {
-
-            }
         }
-
     }
+
+}
 
     public function fetchTeacherData()
     {

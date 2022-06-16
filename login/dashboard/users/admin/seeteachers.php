@@ -167,19 +167,19 @@ margin-right: 7px;
   <form id="teacheraddsubmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <input type="email" class="form-control" required name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
    <div class="form-group">
    <label for="exampleInputEmail1">Select Gender </label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="teachergender" value="1" id="flexRadioDefault1" checked>
+        <input class="form-check-input" required type="radio" name="teachergender" value="1" id="flexRadioDefault1" checked>
         <label class="form-check-label" for="flexRadioDefault1">
           Male
         </label>
       </div>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="teachergender" value="2" id="flexRadioDefault2" >
+          <input class="form-check-input" required type="radio" name="teachergender" value="2" id="flexRadioDefault2" >
           <label class="form-check-label" for="flexRadioDefault2">
             Female
           </label>
@@ -187,20 +187,20 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="teacherpassword" class="form-control" id="passwordid" placeholder="Password">
+      <input type="password" name="teacherpassword" required class="form-control" id="passwordid" placeholder="Password">
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Mobile</label>
-      <input type="text" name="teachermobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
+      <input type="text" name="teachermobile" required  class="form-control" id="mobilenumberid" placeholder="mobilenumber">
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Frist Name </label>
-      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="text" class="form-control" required name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
+      <input id="upload_file" type="file" accept="image/*" required  onchange="loadFile(event)" name="teacherimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
       <img id="output" height="200" width="200" class="" src="#" alt="your image" />
       <script>
@@ -216,25 +216,25 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" required name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" required name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
-      <label for="exampleInputEmail1">netLocation</label>
-      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" class="form-control" required  name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Sellary</label>
-      <input type="text" class="form-control" name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
+      <input type="text" class="form-control" required  name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
       <small id="emailHelp" class="form-text text-muted">Sellary </small>
    </div>
 
@@ -269,13 +269,21 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                             //alert(data);
-                          //  if (data == 0)
-                          //  {
-
-                          //    toastr.error("Email Already Exit");
-                          //  }
-                             toastr.success(" Adding Teacher  Success ");
+           
+                            var fetchdata = JSON.parse(data);
+        
+                            if(fetchdata.email == formData.get('teacheremail'))
+                            {
+                            
+                               toastr.error("Email Id Exist");
+                            
+                            }
+                            
+                       
+                            toastr.info("Please reload The Page For See Effect");
+                            toastr.success("User Succesfully Created");
+                           
+                           
 
 
                            }
@@ -492,6 +500,7 @@ margin-right: 7px;
             },
             success:function(data)
             {
+              //alert(data);
 
               var fetchuserid  = JSON.parse(data);
               $("#updateteacherid").val(fetchuserid.id);
