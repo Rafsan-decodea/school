@@ -269,21 +269,23 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-           
+
                             var fetchdata = JSON.parse(data);
-        
+
                             if(fetchdata.email == formData.get('teacheremail'))
                             {
-                            
+
                                toastr.error("Email Id Exist");
-                            
+
                             }
-                            
-                       
+
+                           if(fetchdata.email != formData.get('teacheremail')){
+                            alert(1);
                             toastr.info("Please reload The Page For See Effect");
                             toastr.success("User Succesfully Created");
-                           
-                           
+                            }
+
+
 
 
                            }
