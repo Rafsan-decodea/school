@@ -195,7 +195,7 @@ class Teacher
                                $sellary = $_POST['teachersellary'];
                                $sql = "insert into school_users(uid,email,password,name,gender,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name',$gender,'$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
                                $db->query($sql);
-                               echo "seccess";
+                               //echo "seccess";
                            }
      
                  } else {

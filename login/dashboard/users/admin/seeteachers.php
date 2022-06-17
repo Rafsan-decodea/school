@@ -271,24 +271,25 @@ margin-right: 7px;
                            {
 
                             var fetchdata = JSON.parse(data);
-
-                            if(fetchdata.email == formData.get('teacheremail'))
+                          
+                            
+                            if(fetchdata.hasOwnProperty('email'))
                             {
 
                                toastr.error("Email Id Exist");
 
                             }
 
-                           if(fetchdata.email != formData.get('teacheremail')){
-                            alert(1);
-                            toastr.info("Please reload The Page For See Effect");
-                            toastr.success("User Succesfully Created");
-                            }
-
-
-
-
+                           else{
+                         
+                              toastr.info("Please reload The Page For See Effect");
+                              toastr.success("User Succesfully Created");
                            }
+
+
+
+
+                          }
                         })
 
 
@@ -502,21 +503,21 @@ margin-right: 7px;
             },
             success:function(data)
             {
-              //alert(data);
+             // alert(data);
 
-              var fetchuserid  = JSON.parse(data);
-              $("#updateteacherid").val(fetchuserid.id);
-              $("#updateteacheremail").val(fetchuserid.email);
-              $("#updateteacherpassword").val(fetchuserid.password);
-              $("#updateteachermobile").val(fetchuserid.phone);
-              $("#updateteachername").val(fetchuserid.name);
-              if(fetchuserid.gender ==1 ){$("#malechecked").prop("checked", true);}else{$("#femalechecked").prop("checked", true);}
-              $("#updatelastnameid").val(fetchuserid.profileimage);
-              $("#output2").attr("src","/school/images/"+fetchuserid.profileimage);
-              $("#updateteacherfathername").val(fetchuserid.fathername);
-              $("#updateteachermothername").val(fetchuserid.mothername);
-              $("#updateteacherlocation").val(fetchuserid.location);
-              $("#updateteachersellary").val(fetchuserid.sellary);
+              var fetchuserid2  = JSON.parse(data);
+              $("#updateteacherid").val(fetchuserid2.id);
+              $("#updateteacheremail").val(fetchuserid2.email);
+              $("#updateteacherpassword").val(fetchuserid2.password);
+              $("#updateteachermobile").val(fetchuserid2.phone);
+              $("#updateteachername").val(fetchuserid2.name);
+              if(fetchuserid2.gender ==1 ){$("#malechecked").prop("checked", true);}else{$("#femalechecked").prop("checked", true);}
+              $("#updatelastnameid").val(fetchuserid2.profileimage);
+              $("#output2").attr("src","/school/images/"+fetchuserid2.profileimage);
+              $("#updateteacherfathername").val(fetchuserid2.fathername);
+              $("#updateteachermothername").val(fetchuserid2.mothername);
+              $("#updateteacherlocation").val(fetchuserid2.location);
+              $("#updateteachersellary").val(fetchuserid2.sellary);
 
             }
         });
