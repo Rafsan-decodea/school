@@ -164,7 +164,7 @@ margin-right: 7px;
       </div>
       <div class="modal-body">
 
-  <form id="studentaddsbmitform">
+  <form id="studentaddsubmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Name </label>
       <input type="text" class="form-control" name="studentname" id="studentname" aria-describedby="emailHelp" Name placeholder="Fristname">
@@ -198,12 +198,12 @@ margin-right: 7px;
 
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
+      <input id="student_upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="studentimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
-      <img id="output" height="200" width="200" class="" src="#" alt="your image" />
+      <img id="studentoutput" height="200" width="200" class="" src="#" alt="your image" />
       <script>
   var loadFile = function(event) {
-    var output = document.getElementById('output');
+    var output = document.getElementById('studentoutput');
     output.src = URL.createObjectURL(event.target.files[0]);
     output.onload = function() {
       URL.revokeObjectURL(output.src) // free memory
@@ -246,6 +246,14 @@ margin-right: 7px;
                            {
                           // alert(data);
                              toastr.success(" Adding Student Success ");
+                             setTimeout(function () {
+
+                             $.get("/school/login/dashboard/users/admin/seestudent.php", function(data) {
+                               $("#updateData").html(data);
+                             });
+                             }, 1000); // Update With out page Load
+
+
 
 
                            }
@@ -261,7 +269,7 @@ margin-right: 7px;
 
 <?php
 
-    $sql = "select * from school_users where uid = 1";
+    $sql = "select * from school_users where uid = 2";
     $result = $db->query($sql);
 
     ?>
@@ -270,9 +278,9 @@ margin-right: 7px;
   <thead>
     <tr>
       <th scope="col">serial</th>
+      <th scope="col">image</th>
       <th scope="col">Roll</th>
       <th scope="col">class</th>
-      <th scope="col">image</th>
       <th scope="col">Name</th>
       <th scope="col">Gender</th>
       <th scope="col">Email</th>
@@ -285,21 +293,24 @@ margin-right: 7px;
     </tr>
   </thead>
   <tbody>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
-      <td>Rafsan jani</td>
+  <?php while ($row = $result->fetch_assoc()) {?>
+    <tr>
+     <th scope="row"><?php echo $number += 1 ?></th>
+     <td><img src="<?php echo "/school/images/" . $row['profileimage'] ?>" height="50" width="50" class="rounded-circle"/></td>
+      <td><?php echo $row["sturoll"]; ?></td>
+      <td><?php echo $row["stuclass"]; ?></td>
+      <td><?php echo $row["name"]; ?></td>
+      <td><?php if ($row['gender'] == 1) {echo "Male";} else {echo "Female";}?></td>
+      <td><?php echo $row["email"]; ?></td>
+      <td><?php echo $row["fathername"]; ?></td>
+      <td><?php echo $row["mothername"]; ?></td>
+      <td><?php echo $row["phone"]; ?></td>
+      <td><?php echo $row["location"]; ?></td>
+      <td><?php echo $row["entrydate"]; ?></td>
       <td><button class="badge btn-danger" onclick="confromDelete(<?php echo $row["id"] ?>);" >Delete</button> </td>
       <td><button class="badge btn-primary" data-toggle="modal" data-target="#editteacher" onclick="FetchData(<?php echo $row["id"] ?>);" >Edit</button> </td>
-
+    </tr>
+    <?php }?>
   </tbody>
 </table>
 
