@@ -153,7 +153,7 @@ margin-right: 7px;
 <section class="content">
 
 <!-- Modal For adding Teacher -->
-<div class="modal fade" id="addteacher" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -167,7 +167,7 @@ margin-right: 7px;
   <form id="studentaddsbmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" name="teacheremail" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <input type="email" class="form-control" name="teachernumber" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
    <div class="form-group">
@@ -282,6 +282,7 @@ margin-right: 7px;
       <th scope="col">serial</th>
       <th scope="col">image</th>
       <th scope="col">Name</th>
+      <th scope="col">Gender</th>
       <th scope="col">Email</th>
       <th scope="col">Father Name </th>
       <th scope="col">Mother Name </th>
@@ -329,6 +330,10 @@ margin-right: 7px;
 
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
+          
+          $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
+             $("#some_div").html(data);
+          });
 
 
       }

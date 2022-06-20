@@ -53,7 +53,7 @@ if ($_SESSION["uid"] == 0) {
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed" id="updateData">
 <div class="wrapper">
 
   <!-- Preloader -->

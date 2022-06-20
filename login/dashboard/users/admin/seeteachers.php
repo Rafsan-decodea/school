@@ -150,7 +150,7 @@ margin-right: 7px;
       </div><!-- /.container-fluid -->
     </div>
 
-<section class="content">
+<section class="content" >
 
 <!-- Modal For adding Teacher -->
 <div class="modal fade" id="addteacher" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -284,6 +284,13 @@ margin-right: 7px;
                          
                               toastr.info("Please reload The Page For See Effect");
                               toastr.success("User Succesfully Created");
+                              setTimeout(function () {
+
+                               $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {  
+                                 $("#updateData").html(data);
+                               });
+                             }, 1000); // Update With out page Load 
+                           
                            }
 
 
@@ -377,9 +384,15 @@ margin-right: 7px;
 
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
+        
+          setTimeout(function () {
 
-
-      }
+          $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {  
+            $("#updateData").html(data);
+          });
+          }, 1000); // Update With out page Load 
+      
+        }
 
 
    });
@@ -545,7 +558,18 @@ margin-right: 7px;
                            success:function(data)
                            {
                              //alert(data);
+                        
                              toastr.success("Update Data Success ");
+
+                           
+                              setTimeout(function () {
+
+                                $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {  
+                              $("#updateData").html(data);
+                              });
+                             
+                              }, 1000); // Update With out page Load 
+
 
 
                            }

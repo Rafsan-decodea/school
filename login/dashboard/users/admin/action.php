@@ -340,3 +340,21 @@ $teacher->updateTeacher();
 $teacher->fetchTeacherData();
 
 ?>
+
+
+<?php 
+
+class Student{
+
+    public function __construct()
+    {
+
+    }
+
+    public function addStudent()
+    {
+        
+    }
+}
+
+?>
