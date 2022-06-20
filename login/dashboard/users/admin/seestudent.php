@@ -167,33 +167,33 @@ margin-right: 7px;
   <form id="studentaddsbmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Name </label>
-      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="text" class="form-control" name="studentname" id="studentname" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="studentfathername" id="studentfathername" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="studentmothername" id="studentmothername" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Location</label>
-      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <input type="text" class="form-control" name="studentlocation" id="studentlocation" aria-describedby="emailHelp" Name placeholder="location">
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="teacherpassword" class="form-control" id="passwordid" placeholder="Password">
+      <input type="password" name="studnetpassword" class="form-control" id="studentpassword" placeholder="Password">
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Mobile</label>
-      <input type="text" name="teachermobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
+      <input type="text" name="studentmobile" class="form-control" id="studentmobile" placeholder="mobilenumber">
    </div>
 
    <div class="form-group">
@@ -211,12 +211,6 @@ margin-right: 7px;
   };
 </script>
 <!-- Show Image Using Javascript  -->
-   </div>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">Sellary</label>
-      <input type="text" class="form-control" name="teachersellary" id="locationid" aria-describedby="emailHelp" Name placeholder="Sallery">
-      <small id="emailHelp" class="form-text text-muted">Sellary </small>
    </div>
 
    <input type="submit" class="btn btn-success" name="submit" value="submit" />
@@ -341,7 +335,7 @@ margin-right: 7px;
 
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
-          
+
           $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
              $("#some_div").html(data);
           });
