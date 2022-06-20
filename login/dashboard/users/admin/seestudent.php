@@ -325,7 +325,7 @@ margin-right: 7px;
   }
   else
   {
-    toastr.warning("Not Delete Teacher ");
+    toastr.warning("Not Delete Student ");
   }
 
  }
