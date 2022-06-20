@@ -79,6 +79,7 @@ CREATE TABLE `school_users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `uid` int NOT NULL,
   `sturoll` varchar(200) DEFAULT NULL,
+  `stuclass` varchar(200) DEFAULT NULL,
   `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `password` varchar(100) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
@@ -100,7 +101,7 @@ CREATE TABLE `school_users` (
 
 LOCK TABLES `school_users` WRITE;
 /*!40000 ALTER TABLE `school_users` DISABLE KEYS */;
-INSERT INTO `school_users` VALUES (6,0,NULL,'shazidno123@gmail.com','rafsan123','Rafsan',0,'560735083.jpeg',NULL,NULL,NULL,NULL,NULL,'2022-06-06 22:22:24'),(8,1,NULL,'test123@gmail.com','rafsan','Rafsan',1,'400579964.png','Al mamun Shikder ','Salma ','01818144463','Chittagong','20000','2022-06-07 21:49:51');
+INSERT INTO `school_users` VALUES (6,0,NULL,NULL,'shazidno123@gmail.com','rafsan123','Rafsan',0,'560735083.jpeg',NULL,NULL,NULL,NULL,NULL,'2022-06-06 22:22:24'),(8,1,NULL,NULL,'test123@gmail.com','rafsan','Rafsan',1,'400579964.png','Al mamun Shikder ','Salma  akter','01818144463','Chittagong','20000','2022-06-07 21:49:51');
 /*!40000 ALTER TABLE `school_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -113,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-20 21:43:12
+-- Dump completed on 2022-06-20 21:53:03
