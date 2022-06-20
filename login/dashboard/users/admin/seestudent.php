@@ -280,6 +280,8 @@ margin-right: 7px;
   <thead>
     <tr>
       <th scope="col">serial</th>
+      <th scope="col">Roll</th>
+      <th scope="col">class</th>
       <th scope="col">image</th>
       <th scope="col">Name</th>
       <th scope="col">Gender</th>
@@ -293,7 +295,20 @@ margin-right: 7px;
     </tr>
   </thead>
   <tbody>
-
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td>Rafsan jani</td>
+      <td><button class="badge btn-danger" onclick="confromDelete(<?php echo $row["id"] ?>);" >Delete</button> </td>
+      <td><button class="badge btn-primary" data-toggle="modal" data-target="#editteacher" onclick="FetchData(<?php echo $row["id"] ?>);" >Edit</button> </td>
 
   </tbody>
 </table>
