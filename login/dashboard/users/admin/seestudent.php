@@ -136,7 +136,7 @@ margin-right: 7px;
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <div class="col-sm-6">
             <h1 class="m-0">Studnet Section</h1>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addteacher">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addstudent">
            Add new Student
         </button>
           </div><!-- /.col -->
@@ -166,9 +166,26 @@ margin-right: 7px;
 
   <form id="studentaddsbmitform">
    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" name="teachernumber" id="emailid" aria-describedby="emailHelp" Name placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
+      <label for="exampleInputEmail1">Name </label>
+      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Father Name</label>
+      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Mother Name</label>
+      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
+      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
@@ -178,11 +195,7 @@ margin-right: 7px;
       <label for="exampleInputPassword1">Mobile</label>
       <input type="text" name="teachermobile" class="form-control" id="mobilenumberid" placeholder="mobilenumber">
    </div>
-   <div class="form-group">
-      <label for="exampleInputEmail1">Frist Name </label>
-      <input type="text" class="form-control" name="teachername" id="fristnameid" aria-describedby="emailHelp" Name placeholder="Fristname">
-      <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
-   </div>
+
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
       <input id="upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="teacherimage" />
@@ -198,23 +211,6 @@ margin-right: 7px;
   };
 </script>
 <!-- Show Image Using Javascript  -->
-   </div>
-   <div class="form-group">
-      <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="teacherfathername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
-      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
-   </div>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="teachermothername" id="lastnameid" aria-describedby="emailHelp" Name placeholder="Lastname">
-      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
-   </div>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">netLocation</label>
-      <input type="text" class="form-control" name="teacherlocation" id="locationid" aria-describedby="emailHelp" Name placeholder="location">
-      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
 
    <div class="form-group">
