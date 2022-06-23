@@ -4,9 +4,9 @@
 
     
     // public $server = "localhost";
-    // public $username = "softeckc_wp521";
-    // public $password = "S(ZZ-88j1p";
-    // public $dbname = "softeckc_wp521";
+    // public $username = "oscschoo_school";
+    // public $password = "05RDVlWpy[c;";
+    // public $dbname = "oscschoo_school";
 
   
     public $server = "localhost";
