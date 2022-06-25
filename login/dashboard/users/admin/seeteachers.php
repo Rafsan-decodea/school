@@ -269,11 +269,11 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                            //alert(data);
+                           // alert(data);
 
                             var fetchdata = JSON.parse(data);
-                          
-                            
+
+
                             if(fetchdata.hasOwnProperty('email'))
                             {
 
@@ -282,16 +282,16 @@ margin-right: 7px;
                             }
 
                            else{
-                         
+
                               toastr.info("Please reload The Page For See Effect");
                               toastr.success("User Succesfully Created");
                               setTimeout(function () {
 
-                               $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {  
+                               $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
                                  $("#updateData").html(data);
                                });
-                             }, 1000); // Update With out page Load 
-                           
+                             }, 1000); // Update With out page Load
+
                            }
 
 
@@ -385,14 +385,14 @@ margin-right: 7px;
 
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
-        
+
           setTimeout(function () {
 
-          $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {  
+          $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
             $("#updateData").html(data);
           });
-          }, 1000); // Update With out page Load 
-      
+          }, 1000); // Update With out page Load
+
         }
 
 
@@ -559,17 +559,17 @@ margin-right: 7px;
                            success:function(data)
                            {
                              //alert(data);
-                        
+
                              toastr.success("Update Data Success ");
 
-                           
+
                               setTimeout(function () {
 
-                                $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {  
+                                $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
                               $("#updateData").html(data);
                               });
-                             
-                              }, 1000); // Update With out page Load 
+
+                              }, 1000); // Update With out page Load
 
 
 

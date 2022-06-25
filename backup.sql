@@ -128,5 +128,5 @@ DELIMITER ;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
--- DROP TRIGGER IF EXISTS `sturoll_trigger`;CREATE DEFINER=`root`@`localhost` TRIGGER `sturoll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW IF NEW.uid = 2 THEN set new.sturoll = CONCAT("STU_ROll_",new.id); END IF
+-- DROP TRIGGER IF EXISTS `sturoll_trigger`;CREATE DEFINER=`root`@`localhost` TRIGGER `sturoll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW IF NEW.uid = 2 THEN set new.sturoll = CONCAT("STU_ROll_",(select count(id)+1 from school_users where uid=2 )); END IF
 -- Dump completed on 2022-06-25 20:17:18
