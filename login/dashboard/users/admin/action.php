@@ -369,13 +369,13 @@ class Student
                     // }
                     $name = $_POST['studentname'];
                     $email = $_POST['studentemail'];
-                    $class = $_POST['stuclass'];
+                    $class = $_POST['studentclass'];
                     $gender = $_POST['studentgender'];
                     $mothername = $_POST['studentmothername'];
                     $fathername = $_POST['studentfathername'];
                     $mobile = $_POST['studentmobile'];
                     $location = $_POST['studentlocation'];
-                    $sql = "insert into school_users(uid,email,password,name,gender,profileimage,fathername,mothername,phone,location,sellary) value (1,'$teacheremail','$teacherpassword','$name',$gender,'$profileimagename','$fathername','$mothername','$mobile','$location','$sellary') ";
+                    $sql = "insert into school_users(uid,stuclass,password,name,gender,profileimage,fathername,mothername,phone,location) value (2,'$class','$studentpassword','$name',$gender,'$profileimagename','$fathername','$mothername','$mobile','$location') ";
                     $db->query($sql);
                     //echo "seccess";
                 }

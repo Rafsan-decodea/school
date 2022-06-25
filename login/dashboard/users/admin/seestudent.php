@@ -171,6 +171,11 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
+      <label for="exampleInputEmail1">Class</label>
+      <input type="number" class="form-control" name="studentclass" id="studentclass" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <small id="emailHelp" class="form-text text-muted">Enter CLass </small>
+   </div>
+   <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
       <input type="text" class="form-control" name="studentfathername" id="studentfathername" aria-describedby="emailHelp" Name placeholder="Lastname">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
@@ -244,7 +249,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                          // alert(data);
+                          alert(data);
                              toastr.success(" Adding Student Success ");
                              setTimeout(function () {
 
