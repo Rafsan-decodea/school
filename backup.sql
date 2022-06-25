@@ -92,7 +92,7 @@ CREATE TABLE `school_users` (
   `sellary` varchar(100) DEFAULT NULL,
   `entrydate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,5 +128,5 @@ DELIMITER ;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2022-06-23 20:57:08
+DROP TRIGGER IF EXISTS `sturoll_trigger`;CREATE DEFINER=`root`@`localhost` TRIGGER `sturoll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW set new.sturoll = CONCAT("STU_ROll_",new.id)
+-- Dump completed on 2022-06-25 20:17:18
