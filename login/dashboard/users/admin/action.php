@@ -352,7 +352,7 @@ class Student
         extract($_POST);
 
         if (isset($_POST['studentpassword'])) {
-         
+
             $filename = $_FILES['studentimage']['name'];
             $extension = pathinfo($filename, PATHINFO_EXTENSION);
             $valid_extension = array("jpg", "jpeg", "png", "gif");
@@ -389,6 +389,23 @@ class Student
 
     }
 
+    public function fetchdata()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if (isset($_POST['studentsendProfileid'])) {
+            $sql = "select * from school_users where id = $studentsendProfileid";
+            $data = $db->query($sql);
+            $response = array();
+            while ($row = mysqli_fetch_assoc($data)) {
+                $response = $row;
+            }
+
+            echo json_encode($response);
+        }
+    }
+
     public function deleteStudent()
     {
         $db = new DB();
@@ -410,5 +427,6 @@ class Student
 $stuobj = new Student();
 $stuobj->addStudent();
 $stuobj->deleteStudent();
+$stuobj->fetchdata();
 
 ?>

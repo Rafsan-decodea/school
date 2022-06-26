@@ -233,7 +233,7 @@ margin-right: 7px;
 <!-- Show Image Using Javascript  -->
    </div>
 
-   <input type="submit" class="btn btn-success" name="submit" value="submit" />
+   <input type="submit" class="btn btn-success" name="submit" value="Update" />
   </form>
       </div>
       <div class="modal-footer">
@@ -362,8 +362,8 @@ margin-right: 7px;
 
       success: function (data,status)
       {
-       
-      
+
+
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
           setTimeout(function () {
@@ -372,7 +372,7 @@ margin-right: 7px;
                $("#updateData").html(data);
              });
              }, 1000);
-       
+
 
 
       }
@@ -401,19 +401,19 @@ margin-right: 7px;
   <form id="studentaddsubmitform">
    <div class="form-group">
       <label for="exampleInputEmail1">Name </label>
-      <input type="text" class="form-control" name="studentname" id="studentname" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="text" class="form-control" name="updatestudentname" id="updatestudentname" aria-describedby="emailHelp" Name placeholder="Fristname">
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
    <label for="exampleInputEmail1">Select Gender </label>
       <div class="form-check">
-        <input class="form-check-input" required type="radio" name="studentgender" value="1" id="flexRadioDefault1" checked>
+        <input class="form-check-input" required type="radio" name="studentgender" value="1" id="male" checked>
         <label class="form-check-label" for="flexRadioDefault1">
           Male
         </label>
       </div>
       <div class="form-check">
-          <input class="form-check-input" required type="radio" name="studentgender" value="2" id="flexRadioDefault2" >
+          <input class="form-check-input" required type="radio" name="studentgender" value="2" id="female" >
           <label class="form-check-label" for="flexRadioDefault2">
             Female
           </label>
@@ -421,40 +421,40 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Class</label>
-      <input type="number" class="form-control" name="studentclass" id="studentclass" aria-describedby="emailHelp" Name placeholder="Enter Class">
+      <input type="number" class="form-control" name="updatestudentclass" id="updatestudentclass" aria-describedby="emailHelp" Name placeholder="Enter Class">
       <small id="emailHelp" class="form-text text-muted">Enter CLass </small>
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="studentfathername" id="studentfathername" aria-describedby="emailHelp" Name placeholder="Father name">
+      <input type="text" class="form-control" name="studentfathername" id="updatestudentfathername" aria-describedby="emailHelp" Name placeholder="Father name">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="studentmothername" id="studentmothername" aria-describedby="emailHelp" Name placeholder="Mother name">
+      <input type="text" class="form-control" name="updatestudentmothername" id="updatestudentmothername" aria-describedby="emailHelp" Name placeholder="Mother name">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Location</label>
-      <input type="text" class="form-control" name="studentlocation" id="studentlocation" aria-describedby="emailHelp" Name placeholder="location">
+      <input type="text" class="form-control" name="updatestudentlocation" id="updatestudentlocation" aria-describedby="emailHelp" Name placeholder="location">
       <small id="emailHelp" class="form-text text-muted">Enter Location </small>
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="studentpassword" class="form-control" id="studentpassword" placeholder="Password">
+      <input type="password" name="updatestudentpassword" class="form-control" id="updatestudentpassword" placeholder="Password">
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Mobile</label>
-      <input type="text" name="studentmobile" class="form-control" id="studentmobile" placeholder="mobilenumber">
+      <input type="text" name="updatestudentmobile" class="form-control" id="updatestudentmobile" placeholder="mobilenumber">
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="student_upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="studentimage" />
+      <input id="update_student_upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="studentimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
-      <img id="studentoutput" height="200" width="200" class="" src="#" alt="your image" />
+      <img id="updatestudentoutput" height="200" width="200" class="" src="#" alt="your image" />
       <script>
   var loadFile = function(event) {
     var output = document.getElementById('studentoutput');
@@ -489,24 +489,21 @@ margin-right: 7px;
             url : "action.php",
             type: "POST",
             data : {
-              sendProfileid: profileid,
+              studentsendProfileid: profileid,
             },
             success:function(data)
             {
 
-              var fetchuserid  = JSON.parse(data);
-              $("#updateteacherid").val(fetchuserid.id);
-              $("#updateteacheremail").val(fetchuserid.email);
-              $("#updateteacherpassword").val(fetchuserid.password);
-              $("#updateteachermobile").val(fetchuserid.phone);
-              $("#updateteachername").val(fetchuserid.name);
-              $("#updatelastnameid").val(fetchuserid.profileimage);
-              $("#output2").attr("src","/school/images/"+fetchuserid.profileimage);
-              $("#updateteacherfathername").val(fetchuserid.fathername);
-              $("#updateteachermothername").val(fetchuserid.mothername);
-              $("#updateteacherlocation").val(fetchuserid.location);
-              $("#updateteachersellary").val(fetchuserid.sellary);
-
+              var studentfetchuserid  = JSON.parse(data);
+              $("#updatestudentname").val(studentfetchuserid.name);
+              if(studentfetchuserid.gender ==1 ){$("#male").prop("checked", true);}else{$("#female").prop("checked", true);}
+              $("#updatestudentclass").val(studentfetchuserid.stuclass);
+              $("#updatestudentfathername").val(studentfetchuserid.fathername);
+              $("#updatestudentmothername").val(studentfetchuserid.mothername);
+              $("#updatestudentlocation").val(studentfetchuserid.location);
+              $("#updatestudentpassword").val(studentfetchuserid.password);
+              $("#updatestudentmobile").val(studentfetchuserid.phone);
+              $("#updatestudentoutput").attr("src","/school/images/"+studentfetchuserid.profileimage);
             }
         });
      }
