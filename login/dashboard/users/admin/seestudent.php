@@ -398,7 +398,8 @@ margin-right: 7px;
       </div>
       <div class="modal-body">
 
-  <form id="studentaddsubmitform">
+  <form id="studentupdateform">
+    <input type="hidden" id="updatestudentid">
    <div class="form-group">
       <label for="exampleInputEmail1">Name </label>
       <input type="text" class="form-control" name="updatestudentname" id="updatestudentname" aria-describedby="emailHelp" Name placeholder="Fristname">
@@ -407,13 +408,13 @@ margin-right: 7px;
    <div class="form-group">
    <label for="exampleInputEmail1">Select Gender </label>
       <div class="form-check">
-        <input class="form-check-input" required type="radio" name="studentgender" value="1" id="male" checked>
+        <input class="form-check-input" required type="radio" name="updatestudentgender" value="1" id="male" checked>
         <label class="form-check-label" for="flexRadioDefault1">
           Male
         </label>
       </div>
       <div class="form-check">
-          <input class="form-check-input" required type="radio" name="studentgender" value="2" id="female" >
+          <input class="form-check-input" required type="radio" name="updatestudentgender" value="2" id="female" >
           <label class="form-check-label" for="flexRadioDefault2">
             Female
           </label>
@@ -452,12 +453,12 @@ margin-right: 7px;
 
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="update_student_upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="studentimage" />
+      <input id="updatestudentuploadfile" type="file" accept="image/*" onchange="loadFile(event)" name="updatestudentuploadfile" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
       <img id="updatestudentoutput" height="200" width="200" class="" src="#" alt="your image" />
       <script>
   var loadFile = function(event) {
-    var output = document.getElementById('studentoutput');
+    var output = document.getElementById('updatestudentoutput');
     output.src = URL.createObjectURL(event.target.files[0]);
     output.onload = function() {
       URL.revokeObjectURL(output.src) // free memory
@@ -495,6 +496,7 @@ margin-right: 7px;
             {
 
               var studentfetchuserid  = JSON.parse(data);
+              $("#updatestudentid").val(studentfetchuserid.id);
               $("#updatestudentname").val(studentfetchuserid.name);
               if(studentfetchuserid.gender ==1 ){$("#male").prop("checked", true);}else{$("#female").prop("checked", true);}
               $("#updatestudentclass").val(studentfetchuserid.stuclass);
@@ -503,6 +505,7 @@ margin-right: 7px;
               $("#updatestudentlocation").val(studentfetchuserid.location);
               $("#updatestudentpassword").val(studentfetchuserid.password);
               $("#updatestudentmobile").val(studentfetchuserid.phone);
+             // $("#updatestudentuploadfile").val(studentfetchuserid.profileimage);
               $("#updatestudentoutput").attr("src","/school/images/"+studentfetchuserid.profileimage);
             }
         });
@@ -514,7 +517,7 @@ margin-right: 7px;
 <script>
 
          $(document).ready(function(){
-                     $("#teacherupdatesubmitform").on("submit",function(e){
+                     $("#studentupdateform").on("submit",function(e){
 
                         e.preventDefault();
 
@@ -531,6 +534,12 @@ margin-right: 7px;
                            {
                              //alert(data);
                              toastr.success("Update Data Success ");
+                             setTimeout(function () {
+
+                              $.get("/school/login/dashboard/users/admin/seestudent.php", function(data) {
+                                $("#updateData").html(data);
+                              });
+                              }, 1000);
 
 
                            }
