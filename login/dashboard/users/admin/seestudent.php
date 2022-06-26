@@ -264,7 +264,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                          alert(data);
+                        //  alert(data);
                              toastr.success(" Adding Student Success ");
                              setTimeout(function () {
 
@@ -338,7 +338,7 @@ margin-right: 7px;
   function confromDelete(profileid)
  {
 
-  var result = confirm("Are You Want to Delete this "+profileid+" ?");
+  var result = confirm("Are You Want to Delete Student  "+profileid+" ?");
   if(result)
   {
     Delete(profileid)
@@ -357,7 +357,7 @@ margin-right: 7px;
         url : "action.php",
         type : 'post',
         data : {
-              profileidSend:profileid,
+              studentprofileidSend:profileid,
           },
 
       success: function (data,status)
@@ -366,10 +366,13 @@ margin-right: 7px;
       
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
+          setTimeout(function () {
 
-          $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
-             $("#some_div").html(data);
-          });
+             $.get("/school/login/dashboard/users/admin/seestudent.php", function(data) {
+               $("#updateData").html(data);
+             });
+             }, 1000);
+       
 
 
       }

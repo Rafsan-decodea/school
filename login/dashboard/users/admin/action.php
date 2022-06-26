@@ -388,9 +388,27 @@ class Student
         }
 
     }
+
+    public function deleteStudent()
+    {
+        $db = new DB();
+        extract($_POST);
+
+        if (isset($_POST['studentprofileidSend'])) {
+            $sql1 = "select profileimage from school_users where id = $studentprofileidSend";
+            $result1 = $db->query($sql1);
+            $deleteimage = mysqli_fetch_array($result1);
+            unlink($_SERVER['DOCUMENT_ROOT'] . "/school/images/" . $deleteimage['profileimage']);
+
+            $sql = "DELETE FROM `school_users` WHERE `school_users`.`id` = $studentprofileidSend";
+            $db->query($sql);
+
+        }
+    }
 }
 
 $stuobj = new Student();
 $stuobj->addStudent();
+$stuobj->deleteStudent();
 
 ?>
