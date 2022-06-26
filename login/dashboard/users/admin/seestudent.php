@@ -171,19 +171,34 @@ margin-right: 7px;
       <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
    </div>
    <div class="form-group">
+   <label for="exampleInputEmail1">Select Gender </label>
+      <div class="form-check">
+        <input class="form-check-input" required type="radio" name="studentgender" value="1" id="flexRadioDefault1" checked>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" required type="radio" name="studentgender" value="2" id="flexRadioDefault2" >
+          <label class="form-check-label" for="flexRadioDefault2">
+            Female
+          </label>
+      </div>
+   </div>
+   <div class="form-group">
       <label for="exampleInputEmail1">Class</label>
-      <input type="number" class="form-control" name="studentclass" id="studentclass" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <input type="number" class="form-control" name="studentclass" id="studentclass" aria-describedby="emailHelp" Name placeholder="Enter Class">
       <small id="emailHelp" class="form-text text-muted">Enter CLass </small>
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="studentfathername" id="studentfathername" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="studentfathername" id="studentfathername" aria-describedby="emailHelp" Name placeholder="Father name">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
    <div class="form-group">
       <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="studentmothername" id="studentmothername" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <input type="text" class="form-control" name="studentmothername" id="studentmothername" aria-describedby="emailHelp" Name placeholder="Mother name">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
@@ -194,7 +209,7 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="studnetpassword" class="form-control" id="studentpassword" placeholder="Password">
+      <input type="password" name="studentpassword" class="form-control" id="studentpassword" placeholder="Password">
    </div>
    <div class="form-group">
       <label for="exampleInputPassword1">Mobile</label>
@@ -347,8 +362,8 @@ margin-right: 7px;
 
       success: function (data,status)
       {
-
-
+       
+      
           toastr.info("Please reload The Page For See Effect");
           toastr.success("Delete Teacher  Successfully ");
 

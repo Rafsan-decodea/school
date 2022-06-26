@@ -352,6 +352,7 @@ class Student
         extract($_POST);
 
         if (isset($_POST['studentpassword'])) {
+         
             $filename = $_FILES['studentimage']['name'];
             $extension = pathinfo($filename, PATHINFO_EXTENSION);
             $valid_extension = array("jpg", "jpeg", "png", "gif");
