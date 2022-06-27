@@ -13,7 +13,7 @@ if ($_SESSION["uid"] == 0) {
 
     ?>
 
-<?php include '../../header.php'?>
+<?php include '../../../header.php'?>
 
 <style>
 
@@ -258,7 +258,7 @@ margin-right: 7px;
 
                         $.ajax({
 
-                           url : "action.php",
+                           url : "../action.php",
                            type: "POST",
                            data : formData,
                            contentType: false,
@@ -269,7 +269,7 @@ margin-right: 7px;
                              toastr.success(" Adding Student Success ");
                              setTimeout(function () {
 
-                             $.get("/school/login/dashboard/users/admin/seestudent.php", function(data) {
+                             $.get("/school/login/dashboard/users/admin/stu/seestudent.php", function(data) {
                                $("#updateData").html(data);
                              });
                              }, 1000); // Update With out page Load
@@ -304,7 +304,6 @@ margin-right: 7px;
       <th scope="col">class</th>
       <th scope="col">Name</th>
       <th scope="col">Gender</th>
-      <th scope="col">Email</th>
       <th scope="col">Father Name </th>
       <th scope="col">Mother Name </th>
       <th scope="col">phone </th>
@@ -322,7 +321,6 @@ margin-right: 7px;
       <td><?php echo $row["stuclass"]; ?></td>
       <td><?php echo $row["name"]; ?></td>
       <td><?php if ($row['gender'] == 1) {echo "Male";} else {echo "Female";}?></td>
-      <td><?php echo $row["email"]; ?></td>
       <td><?php echo $row["fathername"]; ?></td>
       <td><?php echo $row["mothername"]; ?></td>
       <td><?php echo $row["phone"]; ?></td>
@@ -355,7 +353,7 @@ margin-right: 7px;
   {
 
     $.ajax({
-        url : "action.php",
+        url : "../action.php",
         type : 'post',
         data : {
               studentprofileidSend:profileid,
@@ -369,7 +367,7 @@ margin-right: 7px;
           toastr.success("Delete Teacher  Successfully ");
           setTimeout(function () {
 
-             $.get("/school/login/dashboard/users/admin/seestudent.php", function(data) {
+             $.get("/school/login/dashboard/users/admin/stu/seestudent.php", function(data) {
                $("#updateData").html(data);
              });
              }, 1000);
@@ -488,7 +486,7 @@ margin-right: 7px;
 
       $.ajax({
 
-            url : "action.php",
+            url : "../action.php",
             type: "POST",
             data : {
               studentsendProfileid: profileid,
@@ -526,7 +524,7 @@ margin-right: 7px;
 
                         $.ajax({
 
-                           url : "action.php",
+                           url : "../action.php",
                            type: "POST",
                            data : formData,
                            contentType: false,
@@ -537,7 +535,7 @@ margin-right: 7px;
                              toastr.success("Update Data Success ");
                              setTimeout(function () {
 
-                              $.get("/school/login/dashboard/users/admin/seestudent.php", function(data) {
+                              $.get("/school/login/dashboard/users/admin/stu/seestudent.php", function(data) {
                                 $("#updateData").html(data);
                               });
                               }, 1000);
@@ -556,6 +554,6 @@ margin-right: 7px;
 
 </section>
 
-<?php include '../../fotter.php'?>
+<?php include '../../../fotter.php'?>
 
 <?php }?>

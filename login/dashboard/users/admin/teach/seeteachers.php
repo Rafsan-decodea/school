@@ -13,7 +13,7 @@ if ($_SESSION["uid"] == 0) {
 
     ?>
 
-<?php include '../../header.php'?>
+<?php include '../../../header.php'?>
 
 <style>
 
@@ -255,6 +255,7 @@ margin-right: 7px;
 
          $(document).ready(function(){
                      $("#teacheraddsubmitform").on("submit",function(e){
+                      
 
                         e.preventDefault();
 
@@ -262,14 +263,14 @@ margin-right: 7px;
 
                         $.ajax({
 
-                           url : "action.php",
+                           url : "../action.php",
                            type: "POST",
                            data : formData,
                            contentType: false,
                            processData: false,
                            success:function(data)
                            {
-                           // alert(data);
+                            //alert(data);
 
                             var fetchdata = JSON.parse(data);
 
@@ -287,7 +288,7 @@ margin-right: 7px;
                               toastr.success("User Succesfully Created");
                               setTimeout(function () {
 
-                               $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
+                               $.get("/school/login/dashboard/users/admin/teach/seeteachers.php", function(data) {
                                  $("#updateData").html(data);
                                });
                              }, 1000); // Update With out page Load
@@ -373,7 +374,7 @@ margin-right: 7px;
   {
 
     $.ajax({
-        url : "action.php",
+        url : "../action.php",
         type : 'post',
         data : {
               profileidSend:profileid,
@@ -388,7 +389,7 @@ margin-right: 7px;
 
           setTimeout(function () {
 
-          $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
+          $.get("/school/login/dashboard/users/admin/teach/seeteachers.php", function(data) {
             $("#updateData").html(data);
           });
           }, 1000); // Update With out page Load
@@ -510,7 +511,7 @@ margin-right: 7px;
 
       $.ajax({
 
-            url : "action.php",
+            url : "../action.php",
             type: "POST",
             data : {
               sendProfileid: profileid,
@@ -551,7 +552,7 @@ margin-right: 7px;
 
                         $.ajax({
 
-                           url : "action.php",
+                           url : "../action.php",
                            type: "POST",
                            data : formData,
                            contentType: false,
@@ -565,7 +566,7 @@ margin-right: 7px;
 
                               setTimeout(function () {
 
-                                $.get("/school/login/dashboard/users/admin/seeteachers.php", function(data) {
+                                $.get("/school/login/dashboard/users/admin/teach/seeteachers.php", function(data) {
                               $("#updateData").html(data);
                               });
 
@@ -586,6 +587,6 @@ margin-right: 7px;
 
 </section>
 
-<?php include '../../fotter.php'?>
+<?php include '../../../fotter.php'?>
 
 <?php }?>

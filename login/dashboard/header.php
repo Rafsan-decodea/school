@@ -263,7 +263,7 @@ if ($_SESSION["uid"] == 0) {
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/school/login/dashboard/users/admin/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> " class="nav-link">
+                <a href="/school/login/dashboard/users/admin/teach/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> " class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Register  Teacher </p>
                 </a>
@@ -282,7 +282,7 @@ if ($_SESSION["uid"] == 0) {
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/school/login/dashboard/users/admin/seestudent.php" class="nav-link <?php echo $current_page == 'seestudent.php' ? 'active' : null ?> " class="nav-link">
+                <a href="/school/login/dashboard/users/admin/stu/seestudent.php" class="nav-link <?php echo $current_page == 'seestudent.php' ? 'active' : null ?> " class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Register Student </p>
                 </a>
