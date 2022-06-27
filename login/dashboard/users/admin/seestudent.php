@@ -218,12 +218,13 @@ margin-right: 7px;
 
    <div class="form-group">
       <label for="exampleInputEmail1">Image </label>
-      <input id="student_upload_file" type="file" accept="image/*" onchange="loadFile(event)" name="studentimage" />
+      <input id="student_upload_file" type="file" accept="image/*" onchange="loadFile1(event)" name="studentimage" />
       <small id="emailHelp" class="form-text text-muted">Enter Image </small>
-      <img id="studentoutput" height="200" width="200" class="" src="#" alt="your image" />
+      <img id="studentoutput2" height="200" width="200" class="" src="#" alt="your image" />
       <script>
-  var loadFile = function(event) {
-    var output = document.getElementById('studentoutput');
+  var loadFile1 = function(event) {
+    
+    var output = document.getElementById('studentoutput2');
     output.src = URL.createObjectURL(event.target.files[0]);
     output.onload = function() {
       URL.revokeObjectURL(output.src) // free memory
@@ -233,7 +234,7 @@ margin-right: 7px;
 <!-- Show Image Using Javascript  -->
    </div>
 
-   <input type="submit" class="btn btn-success" name="submit" value="Update" />
+   <input type="submit" class="btn btn-success" name="submit" value="Add Student" />
   </form>
       </div>
       <div class="modal-footer">
@@ -399,7 +400,7 @@ margin-right: 7px;
       <div class="modal-body">
 
   <form id="studentupdateform">
-    <input type="hidden" id="updatestudentid">
+    <input type="hidden" id="updatestudentid" name="updatestudentid">
    <div class="form-group">
       <label for="exampleInputEmail1">Name </label>
       <input type="text" class="form-control" name="updatestudentname" id="updatestudentname" aria-describedby="emailHelp" Name placeholder="Fristname">
@@ -468,7 +469,7 @@ margin-right: 7px;
 <!-- Show Image Using Javascript  -->
    </div>
 
-   <input type="submit" class="btn btn-success" name="submit" value="submit" />
+   <input type="submit" class="btn btn-success" name="submit" value="Update Student " />
   </form>
       </div>
       <div class="modal-footer">
@@ -532,7 +533,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                             //alert(data);
+                            // alert(data);
                              toastr.success("Update Data Success ");
                              setTimeout(function () {
 

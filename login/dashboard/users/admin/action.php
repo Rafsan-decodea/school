@@ -412,6 +412,7 @@ class Student
         $db = new DB();
         extract($_POST);
         if (isset($_POST['updatestudentpassword'])) {
+           
 
             if (isset($_FILES['updatestudentuploadfile']) && isset($_POST['updatestudentid'])) {
 
@@ -440,47 +441,37 @@ class Student
             }
 
             if (isset($_POST['updatestudentname']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set email = '$updatestudentname' where id = $updatestudentid ";
+                $sql = "update school_users set name = '$updatestudentname' where id = $updatestudentid ";
                 $db->update($sql);
             }
             if (isset($_POST['updatestudentgender']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set gender = '$updateteachergender' where id = $updatestudentid ";
+                $sql = "update school_users set gender = '$updatestudentgender' where id = $updatestudentid ";
                 $db->update($sql);
             }
 
             if (isset($_POST['updatestudentclass']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set password = '$updatestudentclass' where id = $updatestudentid ";
+                $sql = "update school_users set stuclass = '$updatestudentclass' where id = $updatestudentid ";
                 $db->update($sql);
 
             }
 
             if (isset($_POST['updatestudentfathername']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set phone = '$updatestudentfathername' where id = $updatestudentid ";
+                $sql = "update school_users set fathername = '$updatestudentfathername' where id = $updatestudentid ";
                 $db->update($sql);
             }
 
             if (isset($_POST['updatestudentmothername']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set name = '$updatestudentmothername' where id = $updatestudentid ";
+                $sql = "update school_users set mothername = '$updatestudentmothername' where id = $updatestudentid ";
                 $db->update($sql);
             }
 
             if (isset($_POST['updatestudentlocation']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set fathername = '$updatestudentlocation' where id = $updatestudentid ";
+                $sql = "update school_users set location = '$updatestudentlocation' where id = $updatestudentid ";
                 $db->update($sql);
             }
 
             if (isset($_POST['updatestudentpassword']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set mothername = '$updatestudentpassword' where id = $updatestudentid ";
-                $db->update($sql);
-            }
-
-            if (isset($_POST['updateteacherlocation']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set location = '$updateteacherlocation' where id = $updatestudentid ";
-                $db->update($sql);
-            }
-
-            if (isset($_POST['updatestudentmobile']) && isset($_POST['updatestudentid'])) {
-                $sql = "update school_users set sellary = '$updatestudentmobile' where id = $updatestudentid ";
+                $sql = "update school_users set password = '$updatestudentpassword' where id = $updatestudentid ";
                 $db->update($sql);
             }
 
