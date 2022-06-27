@@ -152,7 +152,23 @@ margin-right: 7px;
 
 <section class="content" >
 
- Teacher details Tab
+
+<div class="container border border-primary">
+        <div class="row">
+            <div class="col">
+
+            <div class="container">
+            <div class="row">
+               <h3>Teacher's Addtional Details </h3>
+            </div>
+            <div class="row">
+
+            </div>
+         </div>
+
+            </div>
+        </div>
+    </div>
 
 </section>
 
