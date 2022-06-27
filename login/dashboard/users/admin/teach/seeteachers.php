@@ -255,7 +255,7 @@ margin-right: 7px;
 
          $(document).ready(function(){
                      $("#teacheraddsubmitform").on("submit",function(e){
-                      
+
 
                         e.preventDefault();
 
@@ -559,7 +559,7 @@ margin-right: 7px;
                            processData: false,
                            success:function(data)
                            {
-                             //alert(data);
+                            // alert(data);
 
                              toastr.success("Update Data Success ");
 
