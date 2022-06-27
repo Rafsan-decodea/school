@@ -426,7 +426,7 @@ margin-right: 7px;
    </div>
    <div class="form-group">
       <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="studentfathername" id="updatestudentfathername" aria-describedby="emailHelp" Name placeholder="Father name">
+      <input type="text" class="form-control" name="updatestudentfathername" id="updatestudentfathername" aria-describedby="emailHelp" Name placeholder="Father name">
       <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
    </div>
 
