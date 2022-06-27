@@ -8,7 +8,7 @@ function PageName()
 }
 
 $current_page = PageName();
-
+// End This Script 
 
 
 if (!isset($_SESSION["id"])) {
@@ -266,6 +266,12 @@ if ($_SESSION["uid"] == 0) {
                 <a href="/school/login/dashboard/users/admin/teach/seeteachers.php" class="nav-link <?php echo $current_page == 'seeteachers.php' ? 'active' : null ?> " class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Register  Teacher </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/school/login/dashboard/users/admin/teach/teacherdetails.php" class="nav-link <?php echo $current_page == 'teacherdetails.php' ? 'active' : null ?> " class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Teacher Details </p>
                 </a>
               </li>
              </ul>
