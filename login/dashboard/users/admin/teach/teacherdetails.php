@@ -163,7 +163,8 @@ margin-right: 7px;
                <h3><u> Teacher's Addtional Details</u> </h3>
             </div>
             <div class="row">
-                <button class="btn btn-primary"> Add Teacher More Details</button>
+              <button class="btn btn-primary "> Add Teacher More Details</button>
+                
                 <button class="btn btn-primary"> Add Teacher Selary Deaits</button>
             </div>
          </div>
