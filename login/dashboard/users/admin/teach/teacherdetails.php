@@ -154,21 +154,25 @@ margin-right: 7px;
 
 
 <div class="container border border-primary">
+    <br>
         <div class="row">
             <div class="col">
 
             <div class="container">
             <div class="row">
-               <h3>Teacher's Addtional Details </h3>
+               <h3><u> Teacher's Addtional Details</u> </h3>
             </div>
             <div class="row">
-
+                <button class="btn btn-primary"> Add Teacher More Details</button>
+                <button class="btn btn-primary"> Add Teacher Selary Deaits</button>
             </div>
          </div>
 
             </div>
         </div>
+      <br>
     </div>
+
 
 </section>
 
