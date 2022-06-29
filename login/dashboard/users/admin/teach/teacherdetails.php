@@ -123,6 +123,13 @@ border-left-color: #2dcb73;
 margin-right: 7px;
 }
 
+.buttonSpace{
+
+ margin-right: 10px;
+
+}
+
+
 </style>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -155,9 +162,10 @@ margin-right: 7px;
                <h3><u> Teacher's Addtional Details</u> </h3>
             </div>
             <div class="row">
-              <button class="btn btn-primary "> Add Teacher More Details</button>
-                
-                <button class="btn btn-primary"> Add Teacher Selary Deaits</button>
+              <button class="btn btn-primary  buttonSpace "> Add Teacher More Details</button>
+               <button class="btn btn-primary buttonSpace  "> Add Teacher Selary Deaits</button>
+               <button class="btn btn-primary buttonSpace  "> Add Teacher Teaching Subject Details</button>
+
             </div>
          </div>
 
