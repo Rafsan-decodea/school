@@ -114,15 +114,7 @@ border: medium none;
 -moz-border-radius: 4px;
 -ms-border-radius: 4px;
 -o-border-radius: 4px;
-border-radius: 4px;
-color: #fff;
-float: right;
-font-family: Lato;
-font-size: 14px;
-letter-spacing: 0.3px;
-margin-right: 9px;
-margin-top: 9px;
-padding: 6px 15px;
+border-radius: 4px; 
 }
 .dropdown > a > span.green:before {
 border-left-color: #2dcb73;
