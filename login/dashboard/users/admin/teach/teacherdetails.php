@@ -162,7 +162,7 @@ margin-right: 7px;
                <h3><u> Teacher's Addtional Details</u> </h3>
             </div>
             <div class="row">
-              <button class="btn btn-primary  buttonSpace "> Add Teacher More Details</button>
+               <button class="btn btn-primary buttonSpace "  data-target="#addmoretecherdetails" > Add Teacher More Details</button>
                <button class="btn btn-primary buttonSpace  "> Add Teacher Selary Deaits</button>
                <button class="btn btn-primary buttonSpace  "> Add Teacher Teaching Subject Details</button>
 
@@ -174,6 +174,103 @@ margin-right: 7px;
       <br>
     </div>
 
+<!-- Teacher Add More Details Tab start  -->
+ <div class="modal fade" id="addmoretecherdetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Teacher</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+  <form id="teacherupdatesubmitform">
+    <input  type="hidden" name="updateteacherid" id="updateteacherid"/>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="updateteacheremail" id="updateteacheremail" aria-describedby="emailHelp" Name placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
+   </div>
+   <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="updateteacherpassword" class="form-control" id="updateteacherpassword" placeholder="Password">
+   </div>
+   <div class="form-group">
+      <label for="exampleInputPassword1">Mobile</label>
+      <input type="text" name="updateteachermobile" class="form-control" id="updateteachermobile" placeholder="mobilenumber">
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Frist Name </label>
+      <input type="text" class="form-control" name="updateteachername" id="updateteachername" aria-describedby="emailHelp" Name placeholder="Fristname">
+      <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
+   </div>
+   <div class="form-group">
+   <label for="exampleInputEmail1">Select Gender </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="updateteachergender" value="1" id="malechecked" checked>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="updateteachergender" value="2" id="femalechecked" >
+          <label class="form-check-label" for="flexRadioDefault2">
+            Female
+          </label>
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Image </label>
+      <input id="updateteacherimage" type="file" accept="image/*" onchange="loadFilee(event)" name="updateteacherimage" />
+      <small id="emailHelp" class="form-text text-muted">Enter Image </small>
+      <img id="output2" height="200" width="200" class="" src="#" alt="your image" />
+      <script>
+  var loadFilee = function(event) {
+    var output = document.getElementById('output2');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>
+<!-- Show Image Using Javascript  -->
+   </div>
+   <div class="form-group">
+      <label for="exampleInputEmail1">Father Name</label>
+      <input type="text" class="form-control" name="updateteacherfathername" id="updateteacherfathername" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Mother Name</label>
+      <input type="text" class="form-control" name="updateteachermothername" id="updateteachermothername" aria-describedby="emailHelp" Name placeholder="Lastname">
+      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" class="form-control" name="updateteacherlocation" id="updateteacherlocation" aria-describedby="emailHelp" Name placeholder="location">
+      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
+   </div>
+
+   <div class="form-group">
+      <label for="exampleInputEmail1">Sellary</label>
+      <input type="text" class="form-control" name="updateteachersellary" id="updateteachersellary" aria-describedby="emailHelp" Name placeholder="Sallery">
+      <small id="emailHelp" class="form-text text-muted">Sellary </small>
+   </div>
+
+   <input type="submit" class="btn btn-success" name="submit"  value="submit" />
+  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal End  -->
 
 </section>
 
