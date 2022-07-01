@@ -153,33 +153,57 @@ margin-right: 7px;
 
 
 <div class="container border border-primary">
-    <br>
-        <div class="row">
-            <div class="col">
-
-            <div class="container">
-            <div class="row">
-               <h3><u> Teacher's Addtional Details</u> </h3>
-            </div>
-            <div class="row">
-               <button class="btn btn-primary buttonSpace "  data-target="#addmoretecherdetails" > Add Teacher More Details</button>
-               <button class="btn btn-primary buttonSpace  "> Add Teacher Selary Deaits</button>
-               <button class="btn btn-primary buttonSpace  "> Add Teacher Teaching Subject Details</button>
-
-            </div>
-         </div>
-
+   <!-- Teacher Profile Details  -->
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
+                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
+                    <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
+                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
         </div>
-      <br>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+            </div>
+        </div>
     </div>
+</div>
+</div>
+ <!-- Teacher Profile Details  End  -->    
+
 
 <!-- Teacher Add More Details Tab start  -->
- <div class="modal fade" id="addmoretecherdetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="addteacherdetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Teacher</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Teacher Details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -193,74 +217,7 @@ margin-right: 7px;
       <input type="email" class="form-control" name="updateteacheremail" id="updateteacheremail" aria-describedby="emailHelp" Name placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
-   <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="updateteacherpassword" class="form-control" id="updateteacherpassword" placeholder="Password">
-   </div>
-   <div class="form-group">
-      <label for="exampleInputPassword1">Mobile</label>
-      <input type="text" name="updateteachermobile" class="form-control" id="updateteachermobile" placeholder="mobilenumber">
-   </div>
-   <div class="form-group">
-      <label for="exampleInputEmail1">Frist Name </label>
-      <input type="text" class="form-control" name="updateteachername" id="updateteachername" aria-describedby="emailHelp" Name placeholder="Fristname">
-      <small id="emailHelp" class="form-text text-muted">Enter Frist name </small>
-   </div>
-   <div class="form-group">
-   <label for="exampleInputEmail1">Select Gender </label>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="updateteachergender" value="1" id="malechecked" checked>
-        <label class="form-check-label" for="flexRadioDefault1">
-          Male
-        </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="updateteachergender" value="2" id="femalechecked" >
-          <label class="form-check-label" for="flexRadioDefault2">
-            Female
-          </label>
-      </div>
-   </div>
-   <div class="form-group">
-      <label for="exampleInputEmail1">Image </label>
-      <input id="updateteacherimage" type="file" accept="image/*" onchange="loadFilee(event)" name="updateteacherimage" />
-      <small id="emailHelp" class="form-text text-muted">Enter Image </small>
-      <img id="output2" height="200" width="200" class="" src="#" alt="your image" />
-      <script>
-  var loadFilee = function(event) {
-    var output = document.getElementById('output2');
-    output.src = URL.createObjectURL(event.target.files[0]);
-    output.onload = function() {
-      URL.revokeObjectURL(output.src) // free memory
-    }
-  };
-</script>
-<!-- Show Image Using Javascript  -->
-   </div>
-   <div class="form-group">
-      <label for="exampleInputEmail1">Father Name</label>
-      <input type="text" class="form-control" name="updateteacherfathername" id="updateteacherfathername" aria-describedby="emailHelp" Name placeholder="Lastname">
-      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
-   </div>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">Mother Name</label>
-      <input type="text" class="form-control" name="updateteachermothername" id="updateteachermothername" aria-describedby="emailHelp" Name placeholder="Lastname">
-      <small id="emailHelp" class="form-text text-muted">Enter Your Last Name</small>
-   </div>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">Location</label>
-      <input type="text" class="form-control" name="updateteacherlocation" id="updateteacherlocation" aria-describedby="emailHelp" Name placeholder="location">
-      <small id="emailHelp" class="form-text text-muted">Enter Location </small>
-   </div>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">Sellary</label>
-      <input type="text" class="form-control" name="updateteachersellary" id="updateteachersellary" aria-describedby="emailHelp" Name placeholder="Sallery">
-      <small id="emailHelp" class="form-text text-muted">Sellary </small>
-   </div>
-
+   
    <input type="submit" class="btn btn-success" name="submit"  value="submit" />
   </form>
       </div>
@@ -277,3 +234,23 @@ margin-right: 7px;
 <?php include '../../../fotter.php'?>
 
 <?php }?>
+
+<!-- <br>
+        <div class="row">
+            <div class="col">
+
+            <div class="container">
+            <div class="row">
+               <h3><u> Teacher's Addtional Details</u> </h3>
+            </div>
+            <div class="row">
+               <button class="btn btn-primary buttonSpace "  data-toggle="modal" data-target="#addteacherdetails" > Add Teacher More Details</button>
+               <button class="btn btn-primary buttonSpace  "> Add Teacher Selary Deaits</button>
+               <button class="btn btn-primary buttonSpace  "> Add Teacher Teaching Subject Details</button>
+
+            </div>
+         </div>
+
+            </div>
+        </div>
+      <br> -->
