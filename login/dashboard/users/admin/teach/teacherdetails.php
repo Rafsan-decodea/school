@@ -151,8 +151,21 @@ margin-right: 7px;
 
 <section class="content" >
 
-
 <div class="container border border-primary">
+
+<?php
+  $sql = "select id, email from school_users where uid = 1";
+  $result = $db->query($sql);
+?>
+
+  <br>
+Select Teacher Gmail :===> 
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="teachernameid" onchange="getTeacherData(this);">
+  <option selected disabled  >Select Teachers gmail </option>
+  <?php while ($row = $result->fetch_assoc()) {?>
+  <option value="<?php echo $row["id"];?>"><?php echo $row["email"];?></option>
+  <?php } $result->free();?>
+</select>
    <!-- Teacher Profile Details  -->
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
@@ -194,6 +207,17 @@ margin-right: 7px;
         </div>
     </div>
 </div>
+
+<script>
+  function getTeacherData(teacher)
+  {
+    var teacherid = teacher.value;
+    alert(teacherid);
+
+  }
+
+</script>
+
 </div>
  <!-- Teacher Profile Details  End  -->    
 
