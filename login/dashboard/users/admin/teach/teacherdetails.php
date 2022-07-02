@@ -161,7 +161,7 @@ margin-right: 7px;
   <br>
 Select Teacher Gmail :===> 
 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="teachernameid" onchange="getTeacherData(this);">
-  <option selected disabled  >Select Teachers gmail </option>
+  <option selected disabledd  >Select Teachers gmail </option>
   <?php while ($row = $result->fetch_assoc()) {?>
   <option value="<?php echo $row["id"];?>"><?php echo $row["email"];?></option>
   <?php } $result->free();?>
@@ -172,33 +172,36 @@ Select Teacher Gmail :===>
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded-circle mt-5" width="150px" src="#"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
         </div>
-        <div class="col-md-5 border-right">
+        <div class="col-md-8 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-12"><label class="labels">Name</label><input type="text" id="teachername" class="form-control" placeholder="first name" value=""></div>
+                    <div class="col-md-12"><label class="labels">Name</label><input disabled type="text" id="teachername" class="form-control" placeholder="first name" value=""></div>
                     <!-- <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div> -->
                 </div>
                 <div class="col-md-12">
-                    <div class=""><label class="labels">Mobile Number</label><input type="text" class="form-control" id="teacherphone" placeholder="enter phone number" value=""></div>
+                    <div class=""><label class="labels">Mobile Number</label><input disabled type="text" class="form-control" id="teacherphone" placeholder="enter phone number" value=""></div>
                     <div class="form-group">
                    <label for="exampleInputEmail1">Gender </label>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="teachergender" value="1" id="malechecked" checked>
+                        <input disabled class="form-check-input" type="radio" name="teachergender" value="1" id="malechecked" checked>
                         <label class="form-check-label" for="flexRadioDefault1">
                           Male
                         </label>
                       </div>
                       <div class="form-check">
-                          <input class="form-check-input" type="radio" name="teachergender" value="2" id="femalechecked" >
+                          <input disabled class="form-check-input" type="radio" name="teachergender" value="2" id="femalechecked" >
                           <label class="form-check-label" for="flexRadioDefault2">
                             Female
                           </label>
                       </div>
                    </div>
                    </div>
+                   <div class="col-md-12"><label class="labels">Father Name </label><input disabled  type="text" id="teacherfathername" class="form-control" placeholder="enter address line 1" value=""></div>
+                   <div class="col-md-12"><label class="labels">mother Name </label><input disabled type="text" id="teachermothername" class="form-control" placeholder="enter address line 1" value=""></div>
+                   <div class="col-md-12"><label class="labels">Sellary </label><input disabled type="text" id="teachersellary" class="form-control" placeholder="enter address line 1" value=""></div>
                     <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
                     <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
@@ -214,13 +217,13 @@ Select Teacher Gmail :===>
                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-3">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
                 <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
                 <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 
