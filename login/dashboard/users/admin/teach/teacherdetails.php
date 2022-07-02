@@ -178,11 +178,11 @@ Select Teacher Gmail :===>
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                    <div class="col-md-12"><label class="labels">Name</label><input type="text" id="teachername" class="form-control" placeholder="first name" value=""></div>
+                    <!-- <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div> -->
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" name="teacherphone" placeholder="enter phone number" value=""></div>
                     <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
                     <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
@@ -216,13 +216,13 @@ Select Teacher Gmail :===>
         url : "../action.php",
         type : 'post',
         data : {
-              teacherdetailsidSend:teacherid,
+          sendProfileid:teacherid,
           },
 
       success: function (data,status)
       {
         
-         
+         alert(data);
       
       }
 
