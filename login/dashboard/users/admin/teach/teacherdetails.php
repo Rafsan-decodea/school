@@ -170,7 +170,7 @@ Select Teacher Gmail :===>
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded-circle mt-5" width="150px" src="#"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
@@ -181,8 +181,24 @@ Select Teacher Gmail :===>
                     <div class="col-md-12"><label class="labels">Name</label><input type="text" id="teachername" class="form-control" placeholder="first name" value=""></div>
                     <!-- <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div> -->
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" name="teacherphone" placeholder="enter phone number" value=""></div>
+                <div class="col-md-12">
+                    <div class=""><label class="labels">Mobile Number</label><input type="text" class="form-control" id="teacherphone" placeholder="enter phone number" value=""></div>
+                    <div class="form-group">
+                   <label for="exampleInputEmail1">Gender </label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="teachergender" value="1" id="malechecked" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="teachergender" value="2" id="femalechecked" >
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Female
+                          </label>
+                      </div>
+                   </div>
+                   </div>
                     <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
                     <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
