@@ -212,7 +212,22 @@ Select Teacher Gmail :===>
   function getTeacherData(teacher)
   {
     var teacherid = teacher.value;
-    alert(teacherid);
+    $.ajax({
+        url : "../action.php",
+        type : 'post',
+        data : {
+              teacherdetailsidSend:teacherid,
+          },
+
+      success: function (data,status)
+      {
+        
+         
+      
+      }
+
+
+   });
 
   }
 
