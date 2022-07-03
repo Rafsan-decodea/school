@@ -170,7 +170,7 @@ Select Teacher Gmail :===>
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded-circle mt-5" width="150px" src="#"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded-circle mt-5" width="150px" src="#"><span class="font-weight-bold" id="teachersname" value="asdsa"></span><span class="text-black-50" id="teachersemail"></span><span> </span></div>
         </div>
         <div class="col-md-8 border-right">
             <div class="p-3 py-5">
@@ -241,7 +241,20 @@ Select Teacher Gmail :===>
       success: function (data,status)
       {
         
-         alert(data);
+              var fetchuserid2  = JSON.parse(data);
+              $("#updateteacherid").val(fetchuserid2.id);
+              $("#teachersemail").val(fetchuserid2.email);
+              $("#updateteacherpassword").val(fetchuserid2.password);
+              $("#updateteachermobile").val(fetchuserid2.phone);
+              $("#teachersname").val(fetchuserid2.name);
+              if(fetchuserid2.gender ==1 ){$("#malechecked").prop("checked", true);}else{$("#femalechecked").prop("checked", true);}
+              $("#updatelastnameid").val(fetchuserid2.profileimage);
+              $("#teacherprofileimage").attr("src","/school/images/"+fetchuserid2.profileimage);
+              $("#updateteacherfathername").val(fetchuserid2.fathername);
+              $("#updateteachermothername").val(fetchuserid2.mothername);
+              $("#updateteacherlocation").val(fetchuserid2.location);
+              $("#updateteachersellary").val(fetchuserid2.sellary);
+
       
       }
 
