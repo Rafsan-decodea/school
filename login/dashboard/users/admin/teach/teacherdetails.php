@@ -114,7 +114,7 @@ border: medium none;
 -moz-border-radius: 4px;
 -ms-border-radius: 4px;
 -o-border-radius: 4px;
-border-radius: 4px; 
+border-radius: 4px;
 }
 .dropdown > a > span.green:before {
 border-left-color: #2dcb73;
@@ -154,23 +154,24 @@ margin-right: 7px;
 <div class="container border border-primary">
 
 <?php
-  $sql = "select id, email from school_users where uid = 1";
-  $result = $db->query($sql);
-?>
+$sql = "select id, email from school_users where uid = 1";
+    $result = $db->query($sql);
+    ?>
 
   <br>
-Select Teacher Gmail :===> 
+Select Teacher Gmail :===>
 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="teachernameid" onchange="getTeacherData(this);">
-  <option selected disabledd  >Select Teachers gmail </option>
+  <option selected disabled  >Select Teachers gmail </option>
   <?php while ($row = $result->fetch_assoc()) {?>
-  <option value="<?php echo $row["id"];?>"><?php echo $row["email"];?></option>
-  <?php } $result->free();?>
+  <option value="<?php echo $row["id"]; ?>"><?php echo $row["email"]; ?></option>
+  <?php }
+    $result->free();?>
 </select>
    <!-- Teacher Profile Details  -->
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded-circle mt-5" width="150px" src="#"><span class="font-weight-bold" id="teachersname" value="asdsa"></span><span class="text-black-50" id="teachersemail"></span><span> </span></div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded mx-auto d-block" width="200px" height="250px" src="#"><span class="font-weight-bold" id="teachersname" value="asdsa"></span><span class="text-black-50" id="teachersemail"></span><span> </span></div>
         </div>
         <div class="col-md-8 border-right">
             <div class="p-3 py-5">
@@ -240,7 +241,7 @@ Select Teacher Gmail :===>
 
       success: function (data,status)
       {
-        
+
               var fetchuserid2  = JSON.parse(data);
               $("#updateteacherid").val(fetchuserid2.id);
               $("#teachersemail").val(fetchuserid2.email);
@@ -255,7 +256,7 @@ Select Teacher Gmail :===>
               $("#updateteacherlocation").val(fetchuserid2.location);
               $("#updateteachersellary").val(fetchuserid2.sellary);
 
-      
+
       }
 
 
@@ -266,7 +267,7 @@ Select Teacher Gmail :===>
 </script>
 
 </div>
- <!-- Teacher Profile Details  End  -->    
+ <!-- Teacher Profile Details  End  -->
 
 
 <!-- Teacher Add More Details Tab start  -->
@@ -288,7 +289,7 @@ Select Teacher Gmail :===>
       <input type="email" class="form-control" name="updateteacheremail" id="updateteacheremail" aria-describedby="emailHelp" Name placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">Enter Your Email Id </small>
    </div>
-   
+
    <input type="submit" class="btn btn-success" name="submit"  value="submit" />
   </form>
       </div>
