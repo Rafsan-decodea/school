@@ -205,13 +205,13 @@ Select Teacher Gmail :===>
                    <div class="col-md-12"><label class="labels">Sellary </label><input disabled type="text" id="teachersellary" class="form-control" placeholder="enter address line 1" value=""></div>
                     <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
                     <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <div class="col-md-12"><label class="labels">State</label><input type="text" disabled id="teacherstate" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" disabled class="form-control" placeholder="country" value="Bangladesh"></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                    <div class="col-md-6"><label class="labels">Religion</label><input type="text" class="form-control" value="" placeholder="state"></div>
                 </div>
                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
@@ -255,7 +255,7 @@ Select Teacher Gmail :===>
               $("#teachersemail").text(fetchuserid2.email);
               $("#teachersname").val(fetchuserid2.name);
               $("#updatelastnameid").val(fetchuserid2.profileimage);
-              $("#updateteacherlocation").val(fetchuserid2.location);
+              $("#teacherstate").val(fetchuserid2.location);
              ;
 
 
