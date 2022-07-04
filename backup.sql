@@ -92,7 +92,7 @@ CREATE TABLE `school_users` (
   `sellary` varchar(100) DEFAULT NULL,
   `entrydate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +101,7 @@ CREATE TABLE `school_users` (
 
 LOCK TABLES `school_users` WRITE;
 /*!40000 ALTER TABLE `school_users` DISABLE KEYS */;
-INSERT INTO `school_users` VALUES (6,0,NULL,NULL,'shazidno123@gmail.com','rafsan123','Rafsan',0,'560735083.jpeg',NULL,NULL,NULL,NULL,NULL,'2022-06-06 22:22:24'),(8,1,NULL,NULL,'test123@gmail.com','rafsan','Rafsan',1,'400579964.png','Al mamun Shikder ','Salma  akter','01818144463','Chittagong','20000','2022-06-07 21:49:51');
+INSERT INTO `school_users` VALUES (6,0,NULL,NULL,'shazidno123@gmail.com','rafsan123','Rafsan',0,'560735083.jpeg',NULL,NULL,NULL,NULL,NULL,'2022-06-06 22:22:24'),(8,1,NULL,NULL,'testy123@gmail.com','rafsan','Rafsan',1,'400579964.png','Al mamun Shikder ','Salma  akter','01818144463','Chittagong','20000','2022-06-07 21:49:51'),(75,2,'STU_ROll_1','1',NULL,'12','Rafsan',1,'110423216.png','Al Mamun Shikder','Salama Akter','01818144463','Chittagogn',NULL,'2022-06-27 00:12:38');
 /*!40000 ALTER TABLE `school_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -113,12 +113,38 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `sturoll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW set new.sturoll = CONCAT("STU_ROll_",new.id) */;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `stu_roll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW IF NEW.uid = 2 THEN set new.sturoll = CONCAT("STU_ROll_",(select count(id)+1 from school_users where uid=2 )); END IF */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `teachers_details`
+--
+
+DROP TABLE IF EXISTS `teachers_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `teachers_details` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `uid` int NOT NULL,
+  `fulladdress` text,
+  `religion` varchar(100) DEFAULT NULL,
+  `education` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teachers_details`
+--
+
+LOCK TABLES `teachers_details` WRITE;
+/*!40000 ALTER TABLE `teachers_details` DISABLE KEYS */;
+/*!40000 ALTER TABLE `teachers_details` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -128,5 +154,9 @@ DELIMITER ;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-07-05  0:17:59
+
+
 -- DROP TRIGGER IF EXISTS `sturoll_trigger`;CREATE DEFINER=`root`@`localhost` TRIGGER `sturoll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW IF NEW.uid = 2 THEN set new.sturoll = CONCAT("STU_ROll_",(select count(id)+1 from school_users where uid=2 )); END IF
 -- Dump completed on 2022-06-25 20:17:18
