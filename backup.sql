@@ -159,4 +159,4 @@ UNLOCK TABLES;
 
 
 -- DROP TRIGGER IF EXISTS `sturoll_trigger`;CREATE DEFINER=`root`@`localhost` TRIGGER `sturoll_trigger` BEFORE INSERT ON `school_users` FOR EACH ROW IF NEW.uid = 2 THEN set new.sturoll = CONCAT("STU_ROll_",(select count(id)+1 from school_users where uid=2 )); END IF
--- Dump completed on 2022-06-25 20:17:18
+-- Dump completed on 2022-06-25 20:17:18 
