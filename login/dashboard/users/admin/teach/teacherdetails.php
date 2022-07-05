@@ -169,6 +169,7 @@ Select Teacher Gmail :===>
 </select>
    <!-- Teacher Profile Details  -->
 <div  id="teacherdetailstab"class="container rounded bg-white mt-5 mb-5">
+   <input hidden id="setteacherid">
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="teacherprofileimage" class="rounded mx-auto d-block" width="200px" height="250px" src="#"><span class="font-weight-bold" id="teachersname" value=""></span><span class="text-black-50" id="teachersemail"></span><span> </span></div>
@@ -203,14 +204,14 @@ Select Teacher Gmail :===>
                    <div class="col-md-12"><label class="labels">Father Name </label><input disabled  type="text" id="teacherfathername" class="form-control" placeholder="enter address line 1" value=""></div>
                    <div class="col-md-12"><label class="labels">mother Name </label><input disabled type="text" id="teachermothername" class="form-control" placeholder="enter address line 1" value=""></div>
                    <div class="col-md-12"><label class="labels">Sellary </label><input disabled type="text" id="teachersellary" class="form-control" placeholder="enter address line 1" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                    <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" id="teacherfulladdress" class="form-control" placeholder="enter address line 1" value=""></div>
+                    <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" id="teacherpostcode"placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">State</label><input type="text" disabled id="teacherstate" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
+                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" id="teachereducation" placeholder="education" value=""></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" disabled class="form-control" placeholder="country" value="Bangladesh"></div>
-                    <div class="col-md-6"><label class="labels">Religion</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                    <div class="col-md-6"><label class="labels">Religion</label><input type="text" id="teacherreligion" class="form-control" value="" placeholder="state"></div>
                 </div>
                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
@@ -250,12 +251,12 @@ Select Teacher Gmail :===>
               $("#teacherfathername").val(fetchuserid2.fathername);
               $("#teachermothername").val(fetchuserid2.mothername);
               $("#teachersellary").val(fetchuserid2.sellary);
-              $("#updateteacherid").val(fetchuserid2.id);
+              $("#setteacherid").val(fetchuserid2.id);
               $("#teachersemail").text(fetchuserid2.email);
               $("#teachersname").val(fetchuserid2.name);
               $("#updatelastnameid").val(fetchuserid2.profileimage);
               $("#teacherstate").val(fetchuserid2.location);
-             ;
+             
 
 
       }
@@ -264,6 +265,36 @@ Select Teacher Gmail :===>
    });
 
   }
+
+</script>
+
+<script>
+   function addtecherdetails()
+   {
+    var teacherid = $("#setteacherid").val();
+    var teacherfulladdress = $("#teacherfulladdress").val();
+    var teacherpostcode = $("#teacherpostcode").val();
+    var teachereducation = $("#teachereducation").val();
+    var teacherreligion = $("#teacherreligion").val();
+    $.ajax({
+        url : "../action.php",
+        type : 'post',
+        data : {
+          sendProfileid:teacherid,
+          },
+
+      success: function (data,status)
+      {
+
+         
+             
+
+
+      }
+
+
+   });
+   }
 
 </script>
 
