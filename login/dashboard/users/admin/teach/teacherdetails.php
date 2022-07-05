@@ -280,7 +280,12 @@ Select Teacher Gmail :===>
         url : "../action.php",
         type : 'post',
         data : {
-          sendProfileid:teacherid,
+          sendteachersid:teacherid,
+          teacherfulladdress:teacherfulladdress,
+          teacherpostcode :teacherpostcode,
+          teachereducation:teachereducation ,
+          teacherreligion:teacherreligion
+          
           },
 
       success: function (data,status)
