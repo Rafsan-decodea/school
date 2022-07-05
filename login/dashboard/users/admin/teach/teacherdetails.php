@@ -213,7 +213,7 @@ Select Teacher Gmail :===>
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" disabled class="form-control" placeholder="country" value="Bangladesh"></div>
                     <div class="col-md-6"><label class="labels">Religion</label><input type="text" id="teacherreligion" class="form-control" value="" placeholder="state"></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" onclick="addtecherdetails()" type="button">Save Profile</button></div>
             </div>
         </div>
         <!-- <div class="col-md-3">
@@ -256,7 +256,7 @@ Select Teacher Gmail :===>
               $("#teachersname").val(fetchuserid2.name);
               $("#updatelastnameid").val(fetchuserid2.profileimage);
               $("#teacherstate").val(fetchuserid2.location);
-             
+
 
 
       }
@@ -285,14 +285,12 @@ Select Teacher Gmail :===>
           teacherpostcode :teacherpostcode,
           teachereducation:teachereducation ,
           teacherreligion:teacherreligion
-          
+
           },
 
       success: function (data,status)
       {
 
-         
-             
 
 
       }
