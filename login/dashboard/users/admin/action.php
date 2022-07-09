@@ -208,6 +208,21 @@ class Teacher
 
     }
 
+    public function addTeacherdetails()
+    {
+        $db = new DB();
+        extract($_POST);
+        if (isset($_POST['sendteachersid'])) {
+
+            $fulladdress = $_POST['teacherfulladdress'];
+            $postcode = $_POST['teacherpostcode'];
+            $education = $_POST['teachereducation'];
+            $religion = $_POST['teacherreligion'];
+            $sql = "insert into teachers_details (uid,fulladdress,postalcode,religion,education) value($sendteachersid,'$fulladdress','$postcode','$education','$religion')";
+            $db->query($sql);
+        }
+    }
+
     public function fetchTeacherData()
     {
         $db = new DB();
@@ -330,6 +345,7 @@ class Teacher
 
 $teacher = new Teacher();
 $teacher->Addteacher();
+$teacher->addTeacherdetails();
 $teacher->deleteTeacher();
 $teacher->updateTeacher();
 $teacher->fetchTeacherData();

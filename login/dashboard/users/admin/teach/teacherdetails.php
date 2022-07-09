@@ -291,7 +291,7 @@ Select Teacher Gmail :===>
       success: function (data,status)
       {
 
-
+        toastr.success("Adding Teacher More details Success");
 
       }
 
