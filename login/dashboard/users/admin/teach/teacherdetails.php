@@ -241,6 +241,8 @@ Select Teacher Gmail :===>
 
       success: function (data,status)
       {
+        alert(typeof(data));
+        alert(JSON.stringify(data)[0]);// Problem
 
               var fetchuserid2  = JSON.parse(data);
               $("#teacherprofileimage").attr("src","/school/images/"+fetchuserid2.profileimage);
@@ -256,7 +258,6 @@ Select Teacher Gmail :===>
               $("#teachersname").val(fetchuserid2.name);
               $("#updatelastnameid").val(fetchuserid2.profileimage);
               $("#teacherstate").val(fetchuserid2.location);
-
 
 
       }

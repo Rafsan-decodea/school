@@ -229,9 +229,18 @@ class Teacher
         extract($_POST);
 
         if (isset($_POST['sendProfileid'])) {
-            $sql = "select * from school_users where id = $sendProfileid";
+            $sql = "select * from school_users where id = $sendProfileid ";
+            $sql2 = "select * from teachers_details where uid = $sendProfileid";
             $data = $db->query($sql);
+            $data2 = $db->query($sql2);
             $response = array();
+
+            $response2 = array();
+            while ($row2 = mysqli_fetch_assoc($data2)) {
+                $response2 = $row2;
+            }
+            echo json_encode($response2);
+
             while ($row = mysqli_fetch_assoc($data)) {
                 $response = $row;
             }
